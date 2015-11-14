@@ -1,0 +1,19 @@
+.navbar {
+
+   padding-top: 50px;
+}
+
+.navbar-brand
+{
+    position: absolute;
+    width: 100%;
+    left: 0;
+    top: 0;
+    text-align: center;
+    margin: auto;
+}
+.img-logo
+{
+  width: 330px;
+  height: 160px;
+}
