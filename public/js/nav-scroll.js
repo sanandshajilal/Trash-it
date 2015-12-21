@@ -26,3 +26,11 @@ $(function() {
         event.preventDefault();
     });
 });
+/*Navbar on click response */
+$('.navbar-collapse ul li a').click(function() {
+    $('.navbar-toggle:visible').click();
+});
+
+$('body').scrollspy({
+    target: '.navbar-fixed-top'
+})
