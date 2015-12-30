@@ -4,7 +4,7 @@ body
 }
 /*Navbar properties*/
 nav.navbar{
-  background-color:#2d2d2d;
+  background-color:transparent;
 }
 nav.navbar.shrink {
   min-height: 35px;
@@ -26,7 +26,7 @@ nav.navbar.shrink {
 /*Each section properties*/
 .intro-section {
     height: 100%;
-    padding-top: 50px;
+    padding-top: 00px;
     text-align: center;
     background: #fff;
 }
