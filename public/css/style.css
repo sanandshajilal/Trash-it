@@ -70,6 +70,7 @@ nav.navbar.shrink {
     text-align: center;
     background: #2d2d2d;
 }
+/*Background Image Slider*/
 .carousel-content {
   position: absolute;
   right: 15%;
@@ -91,6 +92,7 @@ nav.navbar.shrink {
   line-height:60px;
   color:#FFF;
   text-transform:uppercase;
+  text-align:left;
   margin-top:20%;
   font-weight:700;
   padding-left:0;
@@ -100,11 +102,13 @@ nav.navbar.shrink {
   line-height:24px;
   color:#FFF;
   text-transform:uppercase;
+  text-align: left;
   font-weight:400;
   padding-left:0;
 }
 .carousel-content .btn {
   color: #fff;
+  text-align: center;
   background-color:#15bcbd ;
   border-radius: 0;
   margin-top: 5px;
@@ -123,7 +127,6 @@ nav.navbar.shrink {
 	  padding-left:0;
 	}
 }
-/*Background Image Slider*/
 html,
 body {
     height: 100%;
