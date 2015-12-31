@@ -1,11 +1,11 @@
-html,
-body {
+body
+{
   height: 100%;
   background-color: white;
 }
 /*Navbar properties*/
 nav.navbar{
-  background-color: #2d2d2d;
+  background-color: #222222;
   border: none;
 }
 nav.navbar.shrink {
@@ -71,7 +71,41 @@ nav.navbar.shrink {
     text-align: center;
     background: #2d2d2d;
 }
-
+.section {
+  padding: 30px 0;
+  -webkit-transform: translateZ(0);
+  -moz-transform: translateZ(0);
+  -o-transform: translateZ(0);
+  -ms-transform: translateZ(0);
+  transform: translateZ(0);
+}
+.section-white {
+  background: #FFF;
+}
+.section-dark {
+  background: #151515;
+}
+/*--------------------Call to Action Bar Style----------------------*/
+.calltoaction-wrapper {
+  text-align: center;
+}
+.calltoaction-wrapper h3 {
+  display: inline-block;
+  line-height: 36px;
+  color: #fff;
+  margin-right: 10px;
+  margin-bottom: 0px;
+}
+.calltoaction-wrapper .btn {
+  color: #fff;
+  border-radius: 0;
+  background-color: #aec62c;
+  margin-top: 5px;
+  vertical-align: top;
+}
+.calltoaction-wrapper .btn:hover {
+  background-color: rgba(255, 255, 255, 0.3);
+}
 
 /*-----------------------------Menu Animation--------------------------------------- */
 nav a {
