@@ -5,8 +5,10 @@
     <title>Trash it.</title>
     <link href="public/css/bootstrap.min.css" rel="stylesheet">
     <link href="public/css/style.css" rel="stylesheet">
+    <link href="public/css/carousel.css" rel="stylesheet">
 </head>
-<body data-spy="scroll" data-target="#navbar-fixed-top">      <!--not working(scrollspy)-->
+
+<body data-spy="scroll" data-target="#navbar-fixed-top">
   <!--Navbar-->
   <nav class="navbar navbar-default navbar-fixed-top">
     <div class="container-fluid">
@@ -85,59 +87,63 @@
 
 <!-- Intro Section -->
 <section id="intro" class="intro-section">
-  <!-- Full Page Image Background Carousel Header -->
-<header id="myCarousel" class="carousel slide">
-<!-- Indicators -->
-<ol class="carousel-indicators">
-<li data-target="#myCarousel" data-slide-to="0" class="active"></li>
-<li data-target="#myCarousel" data-slide-to="1"></li>
-<li data-target="#myCarousel" data-slide-to="2"></li>
-</ol>
-
-<!-- Wrapper for Slides -->
-<div class="carousel-inner">
-<div class="item active">
-<!-- Set the first background image using inline CSS below. -->
-<div class="fill" style="background-image:url('public/img/home1.jpg');"></div>
-<div class="container">
-                        <div class="row">
-                            <div class="col-sm-12">
-                                <div class="carousel-content">
-                                    <h2>Go Green Get Clean Get Paid</h2>
-                                    <p>Alignment problemm , text position not correct , ! Ithokke sheri aakanamm.. Refer Basica template  </p>
-                                    <br>
-                                    <a class="btn btn-md" href="#">Be a part of it</a>
-                                </div>
+<section id="main-slider" class="no-margin">
+    <div class="carousel slide">
+        <ol class="carousel-indicators">
+            <li data-target="#main-slider" data-slide-to="0" class="active"></li>
+            <li data-target="#main-slider" data-slide-to="1"></li>
+            <li data-target="#main-slider" data-slide-to="2"></li>
+        </ol>
+        <div class="carousel-inner">
+            <div class="item active" style="background-image: url(public/img/home1.jpg)">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-sm-12">
+                            <div class="carousel-content centered">
+                                <h2 class="animation animated-item-1">Welcome to BASICA! A Bootstrap3 Template</h2>
+                                <p class="animation animated-item-2">Sed mattis enim in nulla blandit tincidunt. Phasellus vel sem convallis, mattis est id, interdum augue. Integer luctus massa in arcu euismod venenatis. </p>
                             </div>
                         </div>
                     </div>
-</div>
-<div class="item">
-<!-- Set the second background image using inline CSS below. -->
-<div class="fill" style="background-image:url('public/img/home2.jpg');"></div>
-<div class="carousel-caption">
-  <h2>Caption 2</h2>
-</div>
-</div>
-<div class="item">
-<!-- Set the third background image using inline CSS below. -->
-<div class="fill" style="background-image:url('public/img/home3.jpg');"></div>
-<div class="carousel-caption">
-  <h2>Caption 3</h2>
-</div>
-</div>
-</div>
-
-<!-- Controls -->
-<a class="left carousel-control" href="#myCarousel" data-slide="prev">
-<span class="icon-prev"></span>
-</a>
-<a class="right carousel-control" href="#myCarousel" data-slide="next">
-<span class="icon-next"></span>
-</a>
-
-</header>
-<!--Background Image-->
+                </div>
+            </div><!--/.item-->
+            <div class="item" style="background-image: url(public/img/home2.jpg)">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-sm-12">
+                            <div class="carousel-content center centered">
+                                <h2 class="animation animated-item-1">Powerful and Responsive HTML Template</h2>
+                                <p class="animation animated-item-2">Phasellus adipiscing felis a dictum dictum. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec at ligula risus. </p>
+                                <br>
+                                <a class="btn btn-md animation animated-item-3" href="#">Learn More</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div><!--/.item-->
+            <div class="item" style="background-image: url(public/img/home3.jpg)">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-sm-12">
+                            <div class="carousel-content centered">
+                                <h2 class="animation animated-item-1">Works Seamlessly Well on All Devices</h2>
+                                <p class="animation animated-item-2">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce vitae euismod lacus. Maecenas in tempor lectus. Nam mattis, odio ut dapibus ornare, libero. </p>
+                                <br>
+              <a class="btn btn-md animation animated-item-3" href="#">Learn More</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div><!--/.item-->
+        </div><!--/.carousel-inner-->
+    </div><!--/.carousel-->
+    <a class="prev hidden-xs" href="#main-slider" data-slide="prev">
+        <i class="glyphicon glyphicon-menu-left"></i>
+    </a>
+    <a class="next hidden-xs" href="#main-slider" data-slide="next">
+        <i class="glyphicon glyphicon-menu-right"></i>
+    </a>
+</section><!--/#main-slider-->
 </section>
 <!-- Services Section -->
 <section id="service" class="services-section">
@@ -237,8 +243,7 @@
 </section>
 <script src="public/js/jquery.js"></script>
 <script src="public/js/jquery.easing.min.js"></script>
-<script src="public/js/bootstrap.min.js"></script>
 <script src="public/js/nav-scroll.js"></script>
-
+<script src="public/js/bootstrapv2.min.js"></script>
 </body>
 </html>
