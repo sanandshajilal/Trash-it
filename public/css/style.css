@@ -25,6 +25,19 @@ nav.navbar.shrink {
         padding: 0;
     }
 }
+.navbar .brand {
+max-height: 40px;
+overflow: visible;
+}
+.navbar-brand > img {
+  display: inline-block;
+  padding-bottom: 10px;
+  padding-left: 10px;
+}
+.logo{
+ height: 80.5px;
+ width: 181px;
+}
 /*Each section properties*/
 .intro-section {
     height: 100%;
@@ -99,9 +112,28 @@ nav.navbar.shrink {
 .calltoaction-wrapper .btn {
   color: #fff;
   border-radius: 0;
-  background-color: #aec62c;
   margin-top: 5px;
   vertical-align: top;
+  -webkit-border-radius: 2px;
+  -webkit-background-clip: padding-box;
+  -moz-border-radius: 2px;
+  -moz-background-clip: padding;
+  border-radius: 2px;
+  background-clip: padding-box;
+  cursor: pointer;
+  display: inline-block;
+  text-transform: none;
+  -webkit-transition: all .25s ease;
+  -moz-transition: all .25s ease;
+  -o-transition: all .25s ease;
+  -ms-transition: all .25s ease;
+  transition: all .25s ease;
+  text-align: center;
+  background: none repeat scroll 0 0 #aec62c;
+  text-shadow: none;
+  box-shadow: none;
+  color: #FFF;
+  white-space: nowrap;
 }
 .calltoaction-wrapper .btn:hover {
   background-color: rgba(255, 255, 255, 0.3);
@@ -133,7 +165,7 @@ nav a:focus {
 }
 
 .menu-anim:hover {
-  border-color: #15bcbd;
+  border-color: #aec62c;
 }
 
 
@@ -143,7 +175,7 @@ nav a:focus {
 
 
 .menu-anim span:nth-child(2) {
-  color: #15bcbd;
+  color: #aec62c;
 }
 
 
@@ -189,7 +221,7 @@ nav a:focus {
 }
 
 .menu-anim>span>span:nth-child(3), .menu-anim:before, .menu-anim:after, .menu-anim>:first-child:before, .menu-anim>:first-child:after {
-  border-width: 1.5px;
+  border-width: .5px;
 }
 .menu-anim>span>span:nth-child(3) {
   border-radius: 1.5px;

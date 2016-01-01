@@ -29,8 +29,28 @@
 #main-slider .carousel .btn {
   color: #fff;
   border-radius: 0;
-  background-color: #aec62c;
   margin-top: 5px;
+  float: left;
+  -webkit-border-radius: 2px;
+  -webkit-background-clip: padding-box;
+  -moz-border-radius: 2px;
+  -moz-background-clip: padding;
+  border-radius: 2px;
+  background-clip: padding-box;
+  cursor: pointer;
+  display: inline-block;
+  text-transform: none;
+  -webkit-transition: all .25s ease;
+  -moz-transition: all .25s ease;
+  -o-transition: all .25s ease;
+  -ms-transition: all .25s ease;
+  transition: all .25s ease;
+  text-align: center;
+  background: none repeat scroll 0 0 #aec62c;
+  text-shadow: none;
+  box-shadow: none;
+  color: #FFF;
+  white-space: nowrap;
 }
 #main-slider .carousel .btn:hover {
   background-color: rgba(255, 255, 255, 0.3);
