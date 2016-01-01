@@ -33,11 +33,13 @@ overflow: visible;
   display: inline-block;
   padding-bottom: 10px;
   padding-left: 10px;
+  height: 80.5px;
+  width: 181px;
 }
 .logo{
- height: 80.5px;
- width: 181px;
+  padding-left: 80px;
 }
+
 /*Each section properties*/
 .intro-section {
     height: 100%;
