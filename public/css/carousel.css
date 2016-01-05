@@ -160,4 +160,16 @@
 	  font-weight:700;
 	  padding-left:0;
 	}
+  #main-slider .carousel .btn {
+    margin-top: 1px;
+  }
+	#main-slider .carousel p {
+    font-size: 16px;
+    line-height:16px;
+    color:#FFF;
+    text-align: left;
+    text-transform:uppercase;
+    font-weight:250;
+    padding-left:0;
+	}
 }
