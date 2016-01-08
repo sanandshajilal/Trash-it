@@ -103,6 +103,17 @@ overflow: visible;
 .section-dark {
   background: #151515;
 }
+.section-title h2{
+	font-size: 25px;
+	color: #fff;
+	text-transform: uppercase;
+	margin-top: 50px;
+	letter-spacing: 6px;
+	margin-bottom: 21px;
+}
+.section-title img{
+	margin-bottom: 70px;
+}
 /*--------------------Call to Action Bar Style----------------------*/
 .calltoaction-wrapper {
   text-align: center;
