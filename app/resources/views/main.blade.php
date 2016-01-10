@@ -131,6 +131,11 @@
         <div class="row">
             <div class="col-lg-12">
                 <h1 style="color:#fff">Blog Section</h1>
+              @foreach($items as $item)
+                <ul>
+                <li style="color:#fff">{{ $item->itemname }} </li>
+              </ul>
+              @endforeach
             </div>
         </div>
     </div>
@@ -141,6 +146,32 @@
         <div class="row">
             <div class="col-lg-12">
                 <h1>Login Section</h1>
+                <div class="col-lg-12">
+                    <form name="demo" method="POST" id="demoForm" action="{{url('/demo#login')}}" novalidate>
+                      {{csrf_field()}}
+                        <div class="row">
+                            <div class="col-md-12">
+                                <div class="form-group">
+                                    <input type="text"  class="form-control" placeholder="Your Name *" name="name">
+
+                                </div>
+                                <div class="form-group">
+                                    <select name="itemname">
+                                      <option  value="Item 1">Item 1 </option>
+                                      <option value="Item 2"> Item 2 </option>
+                                      <option value="Item 3"> Item 3 </option>
+                                      <option value="Item 4"> Item 4 </option>
+                                      <option value="Item 5"> Item 5 </option>
+                                    </select>
+
+                                </div>
+                                <div class="clearfix"></div>
+                                <div class="col-lg-12 text-center">
+                                    <div id="success"></div>
+                                    <button type="submit" class="btn btn-xl">Send Message</button>
+                                </div>
+                            </div>
+                        </form>
             </div>
         </div>
     </div>
