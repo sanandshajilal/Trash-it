@@ -157,11 +157,9 @@
                                 </div>
                                 <div class="form-group">
                                     <select name="itemname">
-                                      <option  value="Item 1">Item 1 </option>
-                                      <option value="Item 2"> Item 2 </option>
-                                      <option value="Item 3"> Item 3 </option>
-                                      <option value="Item 4"> Item 4 </option>
-                                      <option value="Item 5"> Item 5 </option>
+                                      @foreach ($items as $item)
+                                      <option  value="{{ $item->itemname }}"> {{ $item->itemname }}</option>
+                                      @endforeach
                                     </select>
 
                                 </div>
