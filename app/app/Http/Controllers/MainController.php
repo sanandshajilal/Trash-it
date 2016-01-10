@@ -22,12 +22,12 @@ class MainController extends Controller
     function contact(Request $request){
       $values = $request->all();
       FeedBack::create($values);
-      return view('main',['values' => $values]);
+      return view('main',['values' => $values,'items'=>Item::all()]);
     }
     function demo(Request $request){
       $values = $request->all();
       ReDemo::create($values);
-      return view('main',['values' => $values]);
+      return view('main',['values' => $values,'items'=>Item::all()]);
     }
 
 }
