@@ -164,10 +164,79 @@
 <!-- Services Section -->
 <section id="service" class="services-section">
     <div class="container">
-        <div class="row">
-            <div class="col-lg-12">
-                <h1>Services Section</h1>
-            </div>
+              <div class="row">
+                <div class="col-lg-6">
+                  <div class="section-subtitle">
+                      <h2>Buuuahhhahha !</h2>
+                    </div>
+                    <div class="col-md-6" style="text-align:justify">
+                    <p>Christ University is a private 'Deemed to be University' in Bangalore, Karnataka, India. Founded in 1969, it is managed by the priests of Carmelites of Mary Immaculate (CMI), the first indigenous Syrian Catholic religious congregation in India.[2] The college was granted 'Deemed to be University' status in 2008.[3] It is one of the leading institutions in India and is usually listed as one of the best in most educational surveys. </p>
+                    </div>
+                    <div class="col-md-6" style="text-align:justify">
+                    <p>Christ University is a private 'Deemed to be University' in Bangalore, Karnataka, India. Founded in 1969, it is managed by the priests of Carmelites of Mary Immaculate (CMI), the first indigenous Syrian Catholic religious congregation in India.[2] The college was granted 'Deemed to be University' status in 2008.[3] It is one of the leading institutions in India and is usually listed as one of the best in most educational surveys.  </p>
+                  </div>
+                  </div>
+                <div class="col-lg-6">
+                  <div class="section-subtitle">
+                      <h2>Request Form</h2>
+                    </div>
+                    <form name="pickupRequest" id="requestForm" action="request.php" novalidate>
+                      <div class="col-md-6">
+                               <div class="form-group">
+                                    <input type="text" class="form-control" placeholder="Name *" id="name">
+                                </div>
+
+                                <div class="form-group">
+                                     <input type="text" class="form-control" placeholder="Address Line 1 *" id="name">
+                                 </div>
+
+                                 <div class="form-group">
+                                      <input type="text" class="form-control" placeholder="Address Line 2 *" id="name">
+                                  </div>
+
+                                  <div class="form-group">
+                                       <input type="text" class="form-control" placeholder="City *" id="name">
+                                   </div>
+
+                                   <div class="form-group">
+                                        <input type="text" class="form-control" placeholder="Pincode *" id="name">
+                                    </div>
+                                <div class="form-group">
+                                    <input type="email" class="form-control" placeholder="Email *" id="email">
+                                </div>
+
+                                <div class="form-group">
+                                    <input type="tel" class="form-control" placeholder="Phone *" id="phone">
+                                </div>
+                              </div>
+                               <div class="col-md-6">
+                                 <div class="form-group">
+                                     <input type="tel" class="form-control" placeholder="Phone *" id="phone">
+                                 </div>
+                                 <div class="form-group">
+                                     <input type="tel" class="form-control" placeholder="Phone *" id="phone">
+                                 </div>
+                                 <div class="form-group">
+                                     <input type="tel" class="form-control" placeholder="Phone *" id="phone">
+                                 </div>
+                                 <div class="form-group">
+                                     <input type="tel" class="form-control" placeholder="Phone *" id="phone">
+                                 </div>
+                                 <div class="form-group">
+                                     <input type="tel" class="form-control" placeholder="Phone *" id="phone">
+                                 </div>
+                                <div class="form-group">
+                                    <textarea class="form-control" placeholder="Remarks" id="message"></textarea>
+                                </div>
+                                </div>
+
+                            <div class="clearfix"></div>
+                            <div class="text-center">
+                                <div id="success"></div>
+                                <button type="submit" class="btn btn-xl">Submit</button>
+                            </div>
+                    </form>
+              </div>
         </div>
     </div>
 </section>
@@ -175,7 +244,7 @@
 <section id="about" class="about-section">
     <div class="container">
         <div class="row">
-          <div class="col-lg-12 text-center section-title">
+          <div class="col-lg-12 text-center section-title wow fadeInLeft animated">
                   <h2>About Us</h2>
                   <img src="public/img/shape.png" alt="">
               </div>
@@ -284,12 +353,13 @@
 </section>
 
 <!-- Contact Section -->
-<section id="contact" class="contact-section">
+<section id="contact" class="contact-section" style="background-image: url(public/img/map.png)" >
     <div class="container">
         <div class="row">
-            <div class="col-lg-12 text-center">
+            <div class="col-lg-12 text-center section-title">
                 <h2 style="color:#fff">Contact Us</h2>
-
+                <img src="public/img/shape.png" alt="">
+                <br/><br/>
             </div>
         </div>
         <div class="row">
@@ -331,5 +401,6 @@
 <script src="public/js/jquery.easing.min.js"></script>
 <script src="public/js/nav-scroll.js"></script>
 <script src="public/js/bootstrapv2.min.js"></script>
+<script src="public/js/wow.js"></script>
 </body>
 </html>

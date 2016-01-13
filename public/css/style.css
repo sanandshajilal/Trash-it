@@ -58,8 +58,9 @@ overflow: visible;
 }
 
 .services-section {
-    height: 100%;
-    padding-top: 150px;
+    min-height: 100%;
+    max-height: auto;
+    padding-top: 100px;
     text-align: center;
     background: #fff;
 }
@@ -67,7 +68,7 @@ overflow: visible;
 .contact-section {
     min-height: 100%;
     max-height: auto;
-    padding-top: 150px;
+    padding-top: 80px;
     text-align: center;
     background: #2d2d2d;
 }
@@ -106,6 +107,13 @@ overflow: visible;
 .section-title h2{
 	font-size: 25px;
 	color: #fff;
+	text-transform: uppercase;
+	margin-top: 50px;
+	letter-spacing: 6px;
+	margin-bottom: 21px;
+}
+.section-subtitle h2{
+	font-size: 25px;
 	text-transform: uppercase;
 	margin-top: 50px;
 	letter-spacing: 6px;
@@ -503,6 +511,10 @@ nav a:focus {
     100% {top: 100%; height: 0%; opacity: 0.2;}
 }
 /*-----------------------------------Menu Animation Over---------------------------------*/
+section#service .form-group textarea.form-control {
+    height: 83px;
+}
+/*...........contact form........*/
 section#contact .form-group {
     margin-bottom: 25px;
 }
@@ -521,9 +533,31 @@ section#contact .form-group textarea.form-control {
 }
 
 section#contact .form-control:focus {
-    border-color: #fed136;
+    border-color: #aec62c;
     box-shadow: none;
 }
+.btn-xl {
+
+    border-color:  #aec62c;
+    border-radius: 3px;
+    margin-top: 50px;
+    letter-spacing: 1px;
+    margin-bottom: 21px;
+    font-size: 18px;
+    color: #fff;
+    background-color:  #aec62c;
+}
+
+.btn-xl:hover,
+.btn-xl:focus,
+.btn-xl:active,
+.btn-xl.active,
+.open .dropdown-toggle.btn-xl {
+    border-color:  #aec62c;
+    color: #fff;
+    background-color:  #aed90f;
+}
+
 /* carousel height fix */
 #main-slider .carousel .item{
   height:70vh;
@@ -597,6 +631,7 @@ section#contact .form-control:focus {
     color: #fff;
     background-color: #fed136;
 }
+
 
 .timeline>li .timeline-image h4 {
     margin-top: 12px;
