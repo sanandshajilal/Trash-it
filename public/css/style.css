@@ -119,8 +119,22 @@ overflow: visible;
 	letter-spacing: 6px;
 	margin-bottom: 21px;
 }
+.section-subtitle h1{
+	font-size: 45px;
+  line-height: 40px;
+  font-weight: 800;
+	text-transform: uppercase;
+	margin-top: 50px;
+	letter-spacing: 2px;
+	margin-bottom: 21px;
+}
 .section-title img{
 	margin-bottom: 70px;
+}
+.dtitle{
+  font-size: 20px;
+  color:#aec62c;
+  padding-top: 10px;
 }
 /*--------------------Call to Action Bar Style----------------------*/
 .calltoaction-wrapper {
