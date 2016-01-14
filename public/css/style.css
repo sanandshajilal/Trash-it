@@ -54,7 +54,7 @@ overflow: visible;
     padding-top: 100px;
     padding-bottom: 70px;
     text-align: center;
-    background: #2d2d2d;
+    background: #fff;
 }
 
 .services-section {
@@ -79,8 +79,9 @@ overflow: visible;
     background: #fff;
 }
 .login-section {
-    height: 100%;
-    padding-top: 150px;
+    min-height: 100%;
+    max-height: auto;
+    padding-top: 100px;
     text-align: center;
     background: #fff;
 }
@@ -106,7 +107,7 @@ overflow: visible;
 }
 .section-title h2{
 	font-size: 25px;
-	color: #fff;
+	color: #2d2d2d;
 	text-transform: uppercase;
 	margin-top: 50px;
 	letter-spacing: 6px;
@@ -528,6 +529,23 @@ nav a:focus {
 section#service .form-group textarea.form-control {
     height: 83px;
 }
+section#login .form-group input.form-control {
+    height: 83px;
+    font-size: 20px;
+}
+section#register .form-group input.form-control {
+    height: 46.8px;
+    font-size: 16px;
+}
+.terms{
+  font-size: 10px;
+  float: left;
+  text-align: left;
+  padding-top: 5px;
+}
+section#login .form-group {
+    padding-top: 10px;
+}
 /*...........contact form........*/
 section#contact .form-group {
     margin-bottom: 25px;
@@ -679,7 +697,7 @@ section#contact .form-control:focus {
 
 .timeline .timeline-heading h4 {
     margin-top: 0;
-    color: #fff;
+    color: #2d2d2d;
 }
 
 .timeline .timeline-heading h4.subheading {
