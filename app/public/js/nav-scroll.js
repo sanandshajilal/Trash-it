@@ -1,18 +1,28 @@
 // jQuery to change the color of the Navbar
   $(window).scroll(function() {
-  if ($(document).scrollTop() > 50) {
+  if ($(document).scrollTop() > 450) {
     $('nav').addClass('shrink');
   } else {
     $('nav').removeClass('shrink');
   }
 });
 
+
 //jQuery to collapse the navbar on scroll
 $(window).scroll(function() {
-    if ($(".navbar").offset().top > 50) {
+    if ($(".navbar").offset().top > 550) {
         $(".navbar-fixed-top").addClass("top-nav-collapse");
     } else {
         $(".navbar-fixed-top").removeClass("top-nav-collapse");
+    }
+});
+
+//jQuery to change logo on scroll
+$(window).scroll(function() {
+    if ($(".navbar").offset().top > 450) {
+        $('.navbar-brand img').attr('src', 'img/logo_dark.png').fadeIn("3000");
+    } else {
+        $('.navbar-brand img').attr('src', 'img/logo_light.png').fadeIn("3000");
     }
 });
 
@@ -30,7 +40,3 @@ $(function() {
 $('.navbar-collapse ul li a').click(function() {
     $('.navbar-toggle:visible').click();
 });
-
-$('body').scrollspy({
-    target: '.navbar-fixed-top'
-})
