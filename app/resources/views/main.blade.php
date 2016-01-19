@@ -518,26 +518,29 @@
               </div>
                 <br/>
                 <br/>
+                @if(isset($values))
+                  <h3>Successfull</h3>
+                @endif
                 <br/>
                 <div class="col-md-6">
-                <form id="registerForm" name="register_form" action="register.php">
+                <form id="registerForm" name="register_form" method="POST" action={{url('/login#login')}}>
                 <div class="form-group">
-                    <input type="text" class="form-control" placeholder="Your Name *" id="name">
+                    <input type="text" class="form-control" placeholder="First Name *" name="fname">
                 </div>
                 <div class="form-group">
-                    <input type="email" class="form-control" placeholder="Your Email *" id="email">
+                    <input type="text" class="form-control" placeholder="Last Name *" name="lname">
                 </div>
                 <div class="form-group">
-                    <input type="text" class="form-control" placeholder="Date of Birth" onfocus="(this.type='date')" id="dob">
+                    <input type="email" class="form-control" placeholder="Email id *" name="email">
                 </div>
 
             </div>
             <div class="col-md-6">
             <div class="form-group">
-                <input type="password" class="form-control" placeholder="Enter a password *" id="pswrd">
+                <input type="password" class="form-control" placeholder="Enter a password *" name="pswrd">
             </div>
             <div class="form-group">
-                <input type="password" class="form-control" placeholder="Re-enter password *" id="rpswrd">
+                <input type="password" class="form-control" placeholder="Re-enter password *" name="rpswrd">
             </div>
             <div style="float:left">
               <input type="radio" name="gender" value="male"> Male

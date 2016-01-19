@@ -16,6 +16,7 @@
 });*/
 Route::get('/','MainController@index');
 Route::post('/contact','MainController@contact');
+Route::post('/login','MainController@login');
 
 /*
 |--------------------------------------------------------------------------

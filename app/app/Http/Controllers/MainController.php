@@ -8,6 +8,7 @@ use App\Http\Requests;
 use App\Http\Controllers\Controller;
 
 use App\Feedback;
+use App\user;
 
 class MainController extends Controller
 {
@@ -22,6 +23,10 @@ class MainController extends Controller
       FeedBack::create($values);
       return view('main',['values' => $values]);
     }
-
+    function login(Request $request){
+      $values = $request->all();
+      User::create($values);
+      return view('main',['values' => $values]);
+    }
 
 }
