@@ -35,24 +35,13 @@ body
     padding: 20px;
 }
 
-.addButton{
+.btn-default{
   margin-top: 20px;
   padding-top: 10px;
 }
 
-.fa-plus{
+.fa-plus, .fa-minus{
   margin-bottom: 8px;
   width: 15px;
   height: 15px;
 }
-
-/*.form-group input.form-control {
-    height: 50px;
-    width: 350px;
-    font-size: 15px;
-}
-/*.form-group input.item {
-    height: 50px;
-    width: 200px;
-    font-size: 15px;
-}*/
