@@ -1,0 +1,58 @@
+body
+{
+  height: 100%;
+  background-color: white;
+}
+.nav{
+  float: right;
+}
+.navbar-brand{
+  font-size: 30px;
+}
+.fa-user, .fa-truck, .fa-unlock-alt{
+  padding-right: 10px;
+}
+.content{
+  padding-top: 50px;
+  text-align: center;
+}
+.section-subtitle h2{
+	font-size: 25px;
+  color: #2d2d2d;
+	text-transform: uppercase;
+	margin-top: 50px;
+	letter-spacing: 3px;
+	margin-bottom: 21px;
+}
+
+.form-group {
+    margin-bottom: 15px;
+    margin-top: 20px;
+}
+
+.form-group input,
+.form-group textarea {
+    padding: 20px;
+}
+
+.addButton{
+  margin-top: 20px;
+  padding-top: 10px;
+}
+
+.fa-plus{
+  margin-bottom: 8px;
+  width: 15px;
+  height: 15px;
+}
+
+/*.form-group input.form-control {
+    height: 50px;
+    width: 350px;
+    font-size: 15px;
+}
+/*.form-group input.item {
+    height: 50px;
+    width: 200px;
+    font-size: 15px;
+}*/
