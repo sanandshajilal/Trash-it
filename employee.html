@@ -51,7 +51,7 @@
 
     <div class="content">
     <div class="row">
-    <div class="col-lg-3 col-md-3 col-sm-3"></div>
+    <div class="col-lg-3 col-md-3 col-sm-3"><img class="empbg" src="public/img/empbg.png"></div>
     <div class="col-lg-6 col-md-6 col-sm-6">
       <div class="section-subtitle">
           <h2>Pickup Details</h2>
@@ -64,6 +64,18 @@
             <input type="text" class="form-control" placeholder="Booking ID *" id="bookid">
         </div>
         <div class="row">
+          <div class="col-lg-6">
+            <div class="form-group">
+                <input type="number" class="form-control" placeholder="Amount Paid *" id="amntpaid">
+            </div>
+          </div>
+          <div class="col-lg-6">
+            <div class="form-group">
+                <input type="number" class="form-control" placeholder="Confirm *" id="camnt">
+            </div>
+          </div>
+        </div>
+        <div class="row">
           <div class="addNew">
           <div class="col-lg-7 col-md-7 col-sm-7 col-xs-7">
             <div class="form-group">
@@ -72,21 +84,35 @@
       </div>
       <div class="col-lg-3 col-md-3 col-sm-3 col-xs-3">
         <div class="form-group">
-            <input id="itemkg" type="text" class="form-control" placeholder="kg*" id="itemweight">
+            <!--<input id="itemkg" type="text" class="form-control" placeholder="kg*" id="itemweight">-->
+            <select class="form-control">
+              <option>1/2 kg</option>
+              <option>1 kg</option>
+              <option>1.5 kg</option>
+              <option>2 kg</option>
+              <option>2.5 kg</option>
+              <option>5 kg</option>
+              <option>10 kg</option>
+              <option>20+ kg</option>
+              <option>50+ kg</option>
+            </select>
         </div>
       </div>
 
-      <div class="col-lg-2">
+      <div class="col-lg-2 col-md-2 col-sm-2 col-xs-2">
             <button id="b1" type="button" class="btn btn-default addButton"><i class="fa fa-plus"></i></button>
         </div>
      </div>
+     <div class="col-lg-7">
+           <button type="button" class="btn btn-default btn-submit">Submit</i></button>
+       </div>
    </div>
     </div>
 
 
   </div>
-  <div class="col-lg-3 col-md-3"></div>
 </div>
+  <div class="col-lg-3 col-md-3"></div>
 </div>
 
 </body>
@@ -107,7 +133,7 @@
          e.preventDefault();
          if(x < max_fields){ //max input box allowed
              x++; //text box increment
-             $(wrapper).append('<div class="col-lg-7 col-md-7 col-sm-7 col-xs-7"><div class="form-group"><input id="itemname" class="form-control" name="itemname" type="text" placeholder="Item Name*" ></div></div><div class="col-lg-3 col-md-3 col-sm-3 col-xs-3"><div class="form-group"><input id="itemkg" type="text" class="form-control" placeholder="kg*" id="itemweight"></div></div><div class="col-lg-2"><button type="button" class="btn btn-default remove_field"><i class="fa fa-minus"></i></button></div>'); //add input box
+             $(wrapper).append('<div class="col-lg-7 col-md-7 col-sm-7 col-xs-7"><div class="form-group"><input id="itemname" class="form-control" name="itemname" type="text" placeholder="Item Name" ></div></div><div class="col-lg-3 col-md-3 col-sm-3 col-xs-3"><div class="form-group"><select class="form-control"><option>1/2 kg</option><option>1 kg</option><option>1.5 kg</option><option>2 kg</option><option>2.5 kg</option><option>5 kg</option><option>10 kg</option><option>20+ kg</option><option>30+ kg</option></select></div></div><div class="col-lg-2"><button type="button" class="btn btn-default remove_field"><i class="fa fa-minus"></i></button></div>'); //add input box
          }
      });
 

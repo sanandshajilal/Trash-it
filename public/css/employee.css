@@ -34,7 +34,10 @@ body
 .form-group textarea {
     padding: 20px;
 }
-
+.form-group select{
+  height: 42px;
+  width: 100px;
+}
 .btn-default{
   margin-top: 20px;
   padding-top: 10px;
@@ -44,4 +47,13 @@ body
   margin-bottom: 8px;
   width: 15px;
   height: 15px;
+}
+.btn-submit{
+  float: left;
+  width: 240px;
+}
+.empbg{
+  width: 420px;
+  height: 500px;
+  margin-top: 50px;
 }
