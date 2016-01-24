@@ -9,6 +9,7 @@ use App\Http\Controllers\Controller;
 
 use App\Feedback;
 use App\user;
+use App\Booking;
 
 class MainController extends Controller
 {
@@ -26,6 +27,11 @@ class MainController extends Controller
     function login(Request $request){
       $values = $request->all();
       User::create($values);
+      return view('main',['values' => $values]);
+    }
+    function booking(Request $request){
+      $values = $request->all();
+      Booking::create($values);
       return view('main',['values' => $values]);
     }
 

@@ -555,7 +555,14 @@ nav a:focus {
 }
 /*-----------------------------------Menu Animation Over---------------------------------*/
 section#service .form-group textarea.form-control {
-    height: 83px;
+    height: 115px;
+}
+section#service .form-group input.form-control {
+    height: 50px;
+}
+section#service .form-group select.form-control {
+    height: 50px;
+    
 }
 section#login .form-group input.form-control {
     height: 83px;

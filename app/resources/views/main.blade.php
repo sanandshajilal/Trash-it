@@ -168,7 +168,7 @@
 <section id="service" class="services-section">
     <div class="container">
               <div class="row">
-                <div class="col-lg-6">
+                <div class="col-lg-6 col-md-6">
                   <div class="section-subtitle">
                       <h1>Why <span style="color:#aec62c">Trash it </span> ?</h1>
                     </div>
@@ -183,68 +183,65 @@
                      </dl>
                     </div>
                     <div class="col-md-6">
-                      <img class="visible-lg" src="{{url('img/recycletree.png')}}" alt="">
+                      <img class="visible-lg visible-md" src="{{url('img/recycletree.png')}}" alt="">
                   </div>
                   </div>
-                <div class="col-lg-6">
+                <div class="col-lg-6 col-md-6">
                   <div class="section-subtitle">
                       <h2>Request Form</h2>
                     </div>
-                    <form name="pickupRequest" id="requestForm" action="request.php" novalidate>
+                    <form method="POST" name="pickupBooking" id="bookingForm" action="{{url('/booking#service')}}" novalidate>
                       <div class="col-md-6">
                                <div class="form-group">
-                                    <input type="text" class="form-control" placeholder="Name *" id="name">
+                                    <input type="text" class="form-control" placeholder="Name *" name="name">
                                 </div>
 
                                 <div class="form-group">
-                                     <input type="text" class="form-control" placeholder="Address Line 1 *" id="name">
+                                     <input type="text" class="form-control" placeholder="Address Line 1 *" name="adrsl1">
                                  </div>
 
                                  <div class="form-group">
-                                      <input type="text" class="form-control" placeholder="Address Line 2 *" id="name">
+                                      <input type="text" class="form-control" placeholder="Address Line 2 *" name="adrsl2">
                                   </div>
 
                                   <div class="form-group">
-                                       <input type="text" class="form-control" placeholder="City *" id="name">
+                                       <!--<input type="text" class="form-control" placeholder="City *" id="city">-->
+                                       <select class="form-control" name="place">
+                                         <option value="Koramangala">Koramangala</option>
+                                         <option value="Indiranagar">Indiranagar</option>
+                                         <option value="Jayanagar">Jayanagar</option>
+                                         <option value="Shanthinagar">Shanthinagar</option>
+                                         <option value="Shivajinagar">Shivajinagar</option>
+                                         <option value="Basavanagudi">Basavanagudi</option>
+                                         <option value="Malleshwaram">Malleshwaram</option>
+                                       </select>
                                    </div>
 
                                    <div class="form-group">
-                                        <input type="text" class="form-control" placeholder="Pincode *" id="name">
+                                        <input type="text" class="form-control" placeholder="Pincode *" name="pin">
                                     </div>
-                                <div class="form-group">
-                                    <input type="email" class="form-control" placeholder="Email *" id="email">
-                                </div>
 
-                                <div class="form-group">
-                                    <input type="tel" class="form-control" placeholder="Phone *" id="phone">
-                                </div>
                               </div>
                                <div class="col-md-6">
                                  <div class="form-group">
-                                     <input type="tel" class="form-control" placeholder="Phone *" id="phone">
+                                     <input type="email" class="form-control" placeholder="Email *" name="email">
                                  </div>
                                  <div class="form-group">
-                                     <input type="tel" class="form-control" placeholder="Phone *" id="phone">
+                                     <input type="tel" class="form-control" placeholder="Phone *" name="phone">
                                  </div>
                                  <div class="form-group">
-                                     <input type="tel" class="form-control" placeholder="Phone *" id="phone">
-                                 </div>
-                                 <div class="form-group">
-                                     <input type="tel" class="form-control" placeholder="Phone *" id="phone">
-                                 </div>
-                                 <div class="form-group">
-                                     <input type="tel" class="form-control" placeholder="Phone *" id="phone">
+                                     <input type="date" class="form-control" placeholder="Pickup Date" name="pickdate">
                                  </div>
                                 <div class="form-group">
-                                    <textarea class="form-control" placeholder="Remarks" id="message"></textarea>
-                                </div>
+                                    <textarea class="form-control" placeholder="Remarks" name="remarks"></textarea>
                                 </div>
 
-                            <div class="clearfix"></div>
-                            <div class=" ">
-                                <div id="success"></div>
-                                <button type="submit" class="btn btn-login">Submit</button>
-                            </div>
+                                </div>
+                                <div class="clearfix"></div>
+                                <div class=" ">
+                                    <div id="success"></div>
+                                    <button type="submit" class="btn btn-login">Submit</button>
+                                </div>
                     </form>
               </div>
         </div>
