@@ -520,7 +520,7 @@
                 @endif
                 <br/>
                 <div class="col-md-6">
-                <form id="registerForm" name="register_form" method="POST" action={{url('/login#login')}}>
+                <form id="registerForm" name="register_form" method="POST" action={{url('/auth/register#login')}}>
                 <div class="form-group">
                     <input type="text" class="form-control" placeholder="First Name *" name="fname">
                 </div>

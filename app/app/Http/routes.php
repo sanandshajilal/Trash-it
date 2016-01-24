@@ -16,7 +16,7 @@
 });*/
 Route::get('/','MainController@index');
 Route::post('/contact','MainController@contact');
-Route::post('/login','MainController@login');
+Route::post('auth/register', 'Auth\AuthController@postRegister');
 Route::post('/booking','MainController@booking');
 
 /*
