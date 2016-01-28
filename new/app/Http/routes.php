@@ -11,11 +11,16 @@
 |
 */
 
-Route::get('/', 'WelcomeController@index');
-
-Route::get('home', 'HomeController@index');
-
 Route::controllers([
-	'auth' => 'Auth\AuthController',
-	'password' => 'Auth\PasswordController',
+	'auth' => 'Auth\AuthController'
 ]);
+
+Route::get('/','MainController@index');
+Route::post('/contact','MainController@contact');
+Route::post('/register', 'MainController@Register');
+Route::post('/booking','MainController@booking');
+
+/* logged in pages */
+Route::get('/employee','EmployeeController@index');
+Route::get('/customer','CustomerController@index');
+Route::get('/admin','AdminController@index');

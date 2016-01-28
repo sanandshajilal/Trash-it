@@ -15,9 +15,11 @@ class Registrar implements RegistrarContract {
 	public function validator(array $data)
 	{
 		return Validator::make($data, [
-			'name' => 'required|max:255',
-			'email' => 'required|email|max:255|unique:users',
-			'password' => 'required|confirmed|min:6',
+				'fname' => 'required|max:255',
+				'lname' => 'required|max:255',
+				'email' => 'required|email|max:255|unique:users',
+				'password' => 'required|confirmed|min:6',
+				'gender' => 'required',
 		]);
 	}
 
@@ -29,11 +31,15 @@ class Registrar implements RegistrarContract {
 	 */
 	public function create(array $data)
 	{
-		return User::create([
-			'name' => $data['name'],
-			'email' => $data['email'],
-			'password' => bcrypt($data['password']),
-		]);
+		/* Sanand! Attention. Creating an Employee(type 0) by default! Figure out how customers and admins are created */
+			return User::create([
+					'fname' => $data['fname'],
+					'lname' => $data['lname'],
+					'email' => $data['email'],
+					'password' => bcrypt($data['password']),
+					'gender' => $data['gender'],
+					'type' => 0
+			]);
 	}
 
 }
