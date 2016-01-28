@@ -520,7 +520,9 @@
                 @endif
                 <br/>
                 <div class="col-md-6">
+
                 <form id="registerForm" name="register_form" method="POST" action={{url('/auth/register#login')}}>
+                    {{csrf_field()}}
                 <div class="form-group">
                     <input type="text" class="form-control" placeholder="First Name *" name="fname">
                 </div>
@@ -531,13 +533,17 @@
                     <input type="email" class="form-control" placeholder="Email id *" name="email">
                 </div>
 
+                @if(isset($errors))
+                  @include('errors.errorlist',['err'=>$errors])
+                @endif
+
             </div>
             <div class="col-md-6">
             <div class="form-group">
                 <input type="password" class="form-control" placeholder="Enter a password *" name="pswrd">
             </div>
             <div class="form-group">
-                <input type="password" class="form-control" placeholder="Re-enter password *" name="rpswrd">
+                <input type="password" class="form-control" placeholder="Re-enter password *" name="pswrd_confirmation">
             </div>
             <div style="float:left">
               <input type="radio" name="gender" value="male"> Male

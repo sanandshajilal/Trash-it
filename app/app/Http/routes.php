@@ -11,6 +11,10 @@
 |
 */
 
+Route::controllers([
+	'auth' => 'Auth\AuthController'
+]);
+
 /*Route::get('/', function () {
     return view('welcome');
 });*/
@@ -18,6 +22,12 @@ Route::get('/','MainController@index');
 Route::post('/contact','MainController@contact');
 Route::post('/register', 'MainController@Register');
 Route::post('/booking','MainController@booking');
+
+/* logged in pages */
+Route::get('/employee','EmployeeController@index');
+Route::get('/customer','CustomerController@index');
+Route::get('/admin','AdminController@index');
+
 
 /*
 |--------------------------------------------------------------------------
