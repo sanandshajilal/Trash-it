@@ -562,7 +562,7 @@ section#service .form-group input.form-control {
 }
 section#service .form-group select.form-control {
     height: 50px;
-    
+
 }
 section#login .form-group input.form-control {
     height: 83px;
@@ -856,7 +856,7 @@ section#contact .form-control:focus {
     }
 }
 ul.social-buttons {
-    margin-bottom: 0;
+    margin-bottom: 0px;
 }
 
 ul.social-buttons li a {
