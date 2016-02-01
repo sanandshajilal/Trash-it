@@ -7,7 +7,7 @@
 		@yield('meta')
 
 
-    <title>Trash it Employee</title>
+    <title>Trash it</title>
 		{!! Html::style('css/bootstrap.css') !!}
 		{!! Html::style('font-awesome/css/font-awesome.min.css') !!}
 		@yield('style')

@@ -8,43 +8,43 @@
             <li data-target="#main-slider" data-slide-to="2"></li>
         </ol>
         <div class="carousel-inner">
-            <div class="item active" style="background-image: url({{url('img/slider/home1.jpg')}})">
+            <div class="item active" style="background-image: url({{url('img/slider/home_2.jpg')}})">
                 <div class="container">
                     <div class="row">
                         <div class="col-sm-12">
                             <div class="carousel-content centered">
-                                <h2 class="animation animated-item-1">Welcome to TRASH IT !</h2>
-                                <p class="animation animated-item-2">Be a part of our "Trash it" family and GO GREEN. Sell your scraps and get paid. </p>
+                                <h2 class="animation animated-item-1">Welcome   </h2>
+                                <p class="animation animated-item-2">Be a part of our family </p>
                               </br>
-                              <a class="btn btn-md animation animated-item-3 page-scroll" href="#about">Learn More</a>
+                              <a class="btn btn-md animation animated-item-3 page-scroll" href="#how">Learn More</a>
                             </div>
                         </div>
                     </div>
                 </div>
             </div><!--/.item-->
-            <div class="item" style="background-image: url({{url('img/slider/home2.jpg')}})">
+            <div class="item" style="background-image: url({{url('img/slider/home_3.jpg')}})">
                 <div class="container">
                     <div class="row">
                         <div class="col-sm-12">
                             <div class="carousel-content center centered">
-                                <h2 class="animation animated-item-1">Trash it is simple and powerfull !</h2>
-                                <p class="animation animated-item-2">Be a part of our "Trash it" family and GO GREEN. Sell your scraps and get paid.</p>
+                                <h2 class="animation animated-item-1">Trash it</br>THE NEW INNOVATION! </h2>
+                                <p class="animation animated-item-2"></p>
                                 <br>
-                                <a class="btn btn-md animation animated-item-3 page-scroll" href="#about">Learn More</a>
+                                <a class="btn btn-md animation animated-item-3 page-scroll" href="#how">Learn More</a>
                             </div>
                         </div>
                     </div>
                 </div>
             </div><!--/.item-->
-            <div class="item" style="background-image: url({{url('img/slider/home3.jpg')}})">
+            <div class="item" style="background-image: url({{url('img/slider/home_1.jpg')}})">
                 <div class="container">
                     <div class="row">
                         <div class="col-sm-12">
                             <div class="carousel-content centered">
-                                <h2 class="animation animated-item-1">Go Green Get Clean Get Paid</h2>
-                                <p class="animation animated-item-2">Be a part of our "Trash it" family and GO GREEN. Sell your scraps and get paid. </p>
+                                <h2 class="animation animated-item-1">Go Green</h2>
+                                <p class="animation animated-item-2">Sell your scraps and get paid :) </p>
                                 <br>
-                                <a class="btn btn-md animation animated-item-3 page-scroll" href="#about">Learn More</a>
+                                <a class="btn btn-md animation animated-item-3 page-scroll" href="#how">Learn More</a>
                             </div>
                         </div>
                     </div>
