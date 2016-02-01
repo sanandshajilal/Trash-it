@@ -24,11 +24,7 @@ class MainController extends Controller
       FeedBack::create($values);
       return view('main',['values' => $values]);
     }
-   /* function register(Request $request){
-      $values = $request->all();
-      User::create($values);
-      return view('main',['values' => $values]);
-    }*/
+  
     function booking(Request $request){
       $values = $request->all();
       Booking::create($values);
