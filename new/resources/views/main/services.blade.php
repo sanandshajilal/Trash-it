@@ -24,7 +24,18 @@
                   <div class="section-subtitle">
                       <h2>Request Form</h2>
                     </div>
-                      {!! Form::open(['url'=>'/booking#service','id'=>"bookingForm",'novalidate'=>'']) !!}
+                    @if(isset($user)&&$user)
+                      {!! Form::open(['url'=>'/customer/booking#service','id'=>"bookingForm",'novalidate'=>'']) !!}
+                    @else
+                        {!! Form::open(['url'=>'/booking#service','id'=>"bookingForm",'novalidate'=>'']) !!}
+                    @endif
+
+                    @if(isset($booking))
+                      <h3>Booking done successfully</h3>
+                      <p>Booking pickdate: {{$booking->pickdate}}</p>
+                      <!-- Customization is left for you -->
+                    @endif
+
                       <!-- try facades. Life is simple with em. -->
                       <div class="col-md-6">
                                <div class="form-group">

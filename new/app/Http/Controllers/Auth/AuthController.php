@@ -96,7 +96,7 @@ class AuthController extends Controller {
 			return redirect('employee');
 		}else if($user->type==1){
 			//not yet. Redirect to customer page
-			return redirect('customer');
+			return redirect('customer#user');
 		}else{
 			//admin
 			return redirect('admin');

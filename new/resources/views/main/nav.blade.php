@@ -51,6 +51,18 @@
                </span>
             </a>
         </li>
+        @if(isset($user)&&$user)
+
+        <li><a href="#user" class="menu-anim page-scroll">
+               <span>
+                <span>Account</span>
+                <span>Account</span>
+               </span>
+            </a>
+        </li>
+
+        @else
+
         <li><a href="#login" class="menu-anim page-scroll">
                <span>
                 <span>Login</span>
@@ -58,6 +70,9 @@
                </span>
             </a>
         </li>
+
+        @endif
+
         <li><a href="#contact" class="menu-anim page-scroll">
                <span>
                 <span>Contact </span>

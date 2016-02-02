@@ -1,5 +1,3 @@
-<!-- Contact Section -->
-
 <section id="contact" class="contact-section" style="background-image: url({{('img/map.png')}})" >
     <div class="container">
         <div class="row">
@@ -10,14 +8,13 @@
             </div>
         </div>
 
-        @if(isset($values))
+        @if(isset($contact))
           <h3 style="color:#fff">Successfull</h3>
         @endif
 
         <div class="row">
             <div class="col-lg-12">
-                <form name="sentMessage" id="contactForm" method="POST" action="{{url('/contact#contact')}}" novalidate>
-                  
+              {!! Form::open(['url'=>'contact#contact','id'=>'contactForm']) !!}
                     <div class="row">
                         <div class="col-md-6">
                             <div class="form-group">

@@ -14,6 +14,10 @@ use App\Booking;
 class MainController extends Controller
 {
     //
+    public function __construct()
+    {
+      $this->middleware('guest'); //redirect's user if authenticated.
+    }
 
     function index(){
       return view('main');
@@ -21,18 +25,20 @@ class MainController extends Controller
     }
     function contact(Request $request){
       $values = $request->all();
-      FeedBack::create($values);
-      return view('main',['values' => $values]);
+      $feedback = FeedBack::create($values);
+      return view('main',['contact' => $feedback]);
     }
    /* function register(Request $request){
       $values = $request->all();
       User::create($values);
       return view('main',['values' => $values]);
     }*/
+
+    /* when no users are logged this route will be used. see customer controller for the other one. */
     function booking(Request $request){
       $values = $request->all();
-      Booking::create($values);
-      return view('main',['values' => $values]);
+      $booking = Booking::create($values);
+      return view('main',['booking' => $booking]);
     }
 
 }

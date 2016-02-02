@@ -32,13 +32,14 @@ class Registrar implements RegistrarContract {
 	public function create(array $data)
 	{
 		/* Sanand! Attention. Creating an Employee(type 0) by default! Figure out how customers and admins are created */
+		/* The above is slightly changed in this comment. It's no longer an employee. We're doing customer reg here. */
 			return User::create([
 					'fname' => $data['fname'],
 					'lname' => $data['lname'],
 					'email' => $data['email'],
 					'password' => bcrypt($data['password']),
 					'gender' => $data['gender'],
-					'type' => 0
+					'type' => 1
 			]);
 	}
 

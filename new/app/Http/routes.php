@@ -23,4 +23,5 @@ Route::post('/booking','MainController@booking');
 /* logged in pages */
 Route::get('/employee','EmployeeController@index');
 Route::get('/customer','CustomerController@index');
+Route::post('/customer/booking','CustomerController@booking');
 Route::get('/admin','AdminController@index');
