@@ -7,8 +7,8 @@
 		@yield('meta')
 
 
-    <title>Trash it Employee</title>
-		{!! Html::style('css/bootstrap.min.css') !!}
+    <title>Trash it</title>
+		{!! Html::style('css/bootstrap.css') !!}
 		{!! Html::style('font-awesome/css/font-awesome.min.css') !!}
 		@yield('style')
 	  <!--- This facade actually saves a lot of time. -->

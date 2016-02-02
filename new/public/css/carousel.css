@@ -105,7 +105,10 @@
   z-index: 5;
   outline: 0;
 }
-#main-slider .prev,
+#main-slider .prev i{
+   padding-top: 15px;
+   text-align: center;
+}
 #main-slider .next i{
    padding-top: 15px;
    text-align: center;

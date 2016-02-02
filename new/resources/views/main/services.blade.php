@@ -9,11 +9,11 @@
                     <div class="col-md-6" style="text-align:justify">
                       <dl>
                        <dt class="dtitle">Saves your time.</dt>
-                          <dd>You don’t need to go out look for kabaadiwalas to sell your scrap. Why to load your vehicles to get rid of the scrap when there is an easier way… </dd>
+                          <dd>You don’t need to go out looking for kabaadiwalas to sell your scraps. Why to load your vehicles to get rid of the scrap when there is an easier way, the TRASH IT.</dd>
                        <dt class="dtitle">One Click away.</dt>
-                          <dd>You can just submit a request form for us to reach you and take care of your scrap. You may also call us. You can also add details about your scrap to make it easier.</dd>
+                          <dd>You can just submit a request form for us to reach you and take care of your scraps. Adding details about your scraps will make it easier and yeah get your money!</dd>
                        <dt class="dtitle">Save environment.</dt>
-                          <dd>Help us to help saving the environment. Contribute your bit. Recycling will save environment from pollution as it will avoid air, water as well as other types of pollutions. </dd>
+                          <dd>Help us to save the environment. Contribute your bit. Recycling will save environment from pollution as it will avoid air, water as well as other types of pollutions. </dd>
                      </dl>
                     </div>
                     <div class="col-md-6">

@@ -28,6 +28,7 @@ class MainController extends Controller
       $feedback = FeedBack::create($values);
       return view('main',['contact' => $feedback]);
     }
+
    /* function register(Request $request){
       $values = $request->all();
       User::create($values);
@@ -35,6 +36,7 @@ class MainController extends Controller
     }*/
 
     /* when no users are logged this route will be used. see customer controller for the other one. */
+
     function booking(Request $request){
       $values = $request->all();
       $booking = Booking::create($values);

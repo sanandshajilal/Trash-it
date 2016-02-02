@@ -12,7 +12,7 @@
 @section('content')
 
 
-<body>
+<body style="background-image: url({{url('img/empbg.jpg')}})">
   <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
         <div class="container">
             <!-- Brand and toggle get grouped for better mobile display -->
@@ -23,7 +23,7 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                <a class="navbar-brand" href="#">Trash it</a>
+                <a class="navbar-brand logo" href="#intro"><img src="{{url('img/logo_emp.png')}}"></a>
             </div>
             <!-- Collect the nav links, forms, and other content for toggling -->
             <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
@@ -54,11 +54,11 @@
 
     <div class="content">
     <div class="row">
-    <div class="col-lg-3 col-md-3 col-sm-3"><img class="empbg visible-lg" src="public/img/empbg.png"></div>
+    <div class="col-lg-3 col-md-3 col-sm-3"></div>
     <div class="col-lg-6 col-md-6 col-sm-6">
       <div class="section-subtitle">
           <h2>Pickup Details</h2>
-          <img src="public/img/shape.png" alt="">
+          <img src="{{url('img/shape.png')}}" alt="">
         </div>
         <div class="row">
           <div class="col-lg-8 col-md-8 col-sm-8">
