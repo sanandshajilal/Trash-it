@@ -14,4 +14,7 @@ class EmployeeController extends Controller
     public function index(){
       return view('employee',['user'=>Auth::user()]);
     }
+    public function empprofile(){
+      return view('/employee/empprofile',['user'=>Auth::user()]);
+    }
 }

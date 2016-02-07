@@ -44,13 +44,7 @@
                </span>
             </a>
         </li>
-        <li><a href="#blog" class="menu-anim page-scroll">
-               <span>
-                <span>Blog</span>
-                 <span>Blog</span>
-               </span>
-            </a>
-        </li>
+        
         @if(isset($user)&&$user)
 
         <li><a href="#user" class="menu-anim page-scroll">

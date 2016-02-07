@@ -23,8 +23,6 @@
 
 @include('main.how')
 
-@include('main.blog')
-
 @include('main.login')
 
 @include('main.contact')

@@ -13,7 +13,7 @@
           <div class="col-xs-12 col-sm-6 col-md-3">
             <div class="thumbnail">
               <img src="{{url('img/how/how_1.jpg')}}" alt="">
-              <div class="caption">
+              <div>
                 <h4>Book a pickup !</h4>
                 <p>Description</p>
                 <a href="#myModal1" role="button" class="btn btn-info btn-xs" data-toggle="modal">Learn More</a>
@@ -40,7 +40,7 @@
           <div class="col-xs-12 col-sm-6 col-md-3">
             <div class="thumbnail">
               <img src="{{url('img/how/how_2.jpg')}}" alt="">
-              <div class="caption">
+              <div class="">
                 <h4>Meet Our Employee !</h4>
                 <p>Description.</p>
                 <a href="#myModal2" role="button" class="btn btn-info btn-xs" data-toggle="modal">Learn More</a>
@@ -49,7 +49,7 @@
                     <div class="modal-content">
                       <div class="modal-header">
                         <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
-                        <h4 class="modal-title">MEET ORU EMPLOYEE !</h4>
+                        <h4 class="modal-title">MEET OUR EMPLOYEE !</h4>
                       </div>
                       <div class="modal-body">
                         <p>Description</p>
@@ -67,7 +67,7 @@
           <div class="col-xs-12 col-sm-6 col-md-3">
             <div class="thumbnail">
               <img src="{{url('img/how/how_3.jpg')}}" alt="">
-              <div class="caption">
+              <div class="">
                 <h4>Sell Your Scraps !</h4>
                 <p>Description.</p>
                 <a href="#myModal3" role="button" class="btn btn-info btn-xs" data-toggle="modal">Learn More</a>
@@ -94,7 +94,7 @@
           <div class="col-xs-12 col-sm-6 col-md-3">
             <div class="thumbnail">
               <img src="{{url('img/how/how_4.jpg')}}" alt="">
-              <div class="caption">
+              <div class="">
                 <h4>Get Paid !</h4>
                 <p>Description.</p>
                 <a href="#myModal4" role="button" class="btn btn-info btn-xs" data-toggle="modal">Learn More</a>
