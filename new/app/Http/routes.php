@@ -25,4 +25,8 @@ Route::get('/employee','EmployeeController@index');
 Route::get('/empprofile','EmployeeController@empprofile');
 Route::get('/customer','CustomerController@index');
 Route::post('/customer/booking','CustomerController@booking');
+
 Route::get('/admin','AdminController@index');
+Route::get('/emplist','AdminController@emplist');
+Route::get('/userlist','AdminController@userlist');
+Route::get('/report','AdminController@report');
