@@ -7,21 +7,28 @@ use Illuminate\Http\Request;
 use App\Http\Requests;
 use App\Http\Controllers\Controller;
 use App\User;
+use Auth;
 
 class AdminController extends Controller
 {
 
 
   public function index(){
-    return view('admin.dashboard');
+    return view('admin.dashboard',['user'=>Auth::user()]);
   }
   public function emplist(){
-    return view('admin.employee');
+    $users=User::where('type','=', 0)
+               ->orderBy('id', 'desc')
+               ->get();
+    return view('admin.employee',['users'=>$users,'user'=>Auth::user()]);
   }
   public function userlist(){
-    return view('admin.user',['user'=>$user]);
+    $users=User::where('type','=', 1)
+               ->orderBy('id', 'desc')
+               ->get();
+    return view('admin.user',['users'=>$users,'user'=>Auth::user()]);
   }
   public function report(){
-    return view('admin.report');
+    return view('admin.report',['user'=>Auth::user()]);
   }
 }

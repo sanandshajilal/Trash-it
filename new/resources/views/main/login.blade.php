@@ -9,7 +9,6 @@
             </div>
             <br/>
             <br/>
-            <a href="{{url('/admin')}}"><i class="fa fa-fw fa-user"></i> Admin</a>
             <br/>
 
             {!! Form::open(['url'=>'/auth/login']) !!}
