@@ -31,4 +31,7 @@ class AdminController extends Controller
   public function report(){
     return view('admin.report',['user'=>Auth::user()]);
   }
+  public function addemployee(){
+    return view('admin.addempl',['user'=>Auth::user()]);
+  }
 }

@@ -76,53 +76,17 @@
               <div class="row">
                   <div class="col-lg-12">
                       <h1 class="page-header">
-                          Manage <small> employees</small>
+                          Add New Employee
                       </h1>
                       <ol class="breadcrumb">
                           <li class="active">
-                              <i class="fa fa-list"></i> Employee list
+                              <i class="fa fa-list"></i> New Employee
                           </li>
                       </ol>
                   </div>
               </div>
 
 
-              <div class="row">
-                    <div class="col-md-12">
-                      <table class="table table-striped">
-                        <tr>
-                          <th>Name</th>
-                          <th>Gender</th>
-                          <th>Email</th>
-                          <th>Designation</th>
-                          <th>Links</th>
-                          <th>Status</th>
-                        </tr>
-												@foreach($users as $user)
-                        <tr>
-                          <td>{{$user->fname}} {{$user->lname}}</td>
-                          <td>{{$user->gender}}</td>
-                          <td>{{$user->email}}</td>
-                          <td>Manager</td>
-                          <td>
-                            <a href="#" class="btn btn-default">Edit</a>
-                            <a href="#" class="btn btn-default">Delete</a>
-                          </td>
-                          <td>                                <a href="#" class="btn btn-default">Details</a></td>
-                        </tr>
-												@endforeach
-                        </table>
-
-                      <a href="{{url('/addemp')}}" class="btn btn-default">Add New Employee</a>
-
-                    </div>
-                  </div>
-                </div>
-              </div>
-
-              @endsection
-
-              @section('script')
 
               <script src="js/jquery.js"></script>
 
