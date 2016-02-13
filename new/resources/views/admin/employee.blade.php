@@ -108,7 +108,7 @@
                           <td>Manager</td>
                           <td>
                             <a href="#" class="btn btn-default">Edit</a>
-                            <a href="#" class="btn btn-default">Delete</a>
+                            <a href="delemp/{{$user->id}}" class="btn btn-default">Delete</a>
                           </td>
                           <td>                                <a href="#" class="btn btn-default">Details</a></td>
                         </tr>

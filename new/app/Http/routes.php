@@ -33,3 +33,4 @@ Route::get('/report','AdminController@report');
 Route::get('/feedback','AdminController@feedback');
 
 Route::get('/addemp','AdminController@addemployee');
+Route::get('/delemp/{id}','AdminController@delemployee');

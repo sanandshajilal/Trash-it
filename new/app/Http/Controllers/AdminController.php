@@ -41,4 +41,13 @@ class AdminController extends Controller
   public function addemployee(){
     return view('admin.addempl',['user'=>Auth::user()]);
   }
+  public function delemployee($id){
+    $user = User::find($id);
+    $user->delete();
+
+    $users=User::where('type','=', 0)
+               ->orderBy('id', 'desc')
+               ->get();
+    return view('admin.employee',['users'=>$users,'user'=>Auth::user()]);
+  }
 }
