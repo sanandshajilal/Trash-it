@@ -82,11 +82,51 @@
                       </h1>
                       <ol class="breadcrumb">
                           <li class="active">
-                              <i class="fa fa-list"></i> New Employee
+                              <i class="fa fa-plus"></i> New Employee
                           </li>
                       </ol>
                   </div>
               </div>
+
+							<div class="row">
+								<div class="col-md-6">
+
+                <form id="addemp" name="addemp_form" action="addemp.php">
+                <div class="form-group">
+                    <input type="text" class="form-control" placeholder="First Name *" id="name">
+                </div>
+                <div class="form-group">
+                    <input type="text" class="form-control" placeholder="Last Name *" id="email">
+                </div>
+
+            </div>
+            <div class="col-md-6">
+							<select class="form-group form-control" >
+								<option >PickUp Employee </option>
+								<option>Stock Master </option>
+							</select>
+
+							<!-- This dropdown needed only for pickup employee-->
+							<select class="form-group form-control" >
+								<option >Koramangala </option>
+								<option>Madiwala </option>
+								<option>Some other area ! </option>
+							</select>
+            <div class="form-group">
+                <input type="number" class="form-control" placeholder="Tel No *" id="pswrd">
+            </div>
+            <div class="form-group">
+                <input type="email" class="form-control" placeholder="Email id *" id="rpswrd">
+            </div>
+            <div style="float:left">
+              <input type="radio" name="gender" value="male"> Male
+              <input type="radio" name="gender" value="female"> Female
+            </div>
+            <div>
+            <button type="submit" style="float:right" class="btn btn-default"><i class="fa fa-plus"></i></button>
+          </div>
+        </div>
+      </form>
 
 
 
