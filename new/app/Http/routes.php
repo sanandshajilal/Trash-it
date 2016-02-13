@@ -30,5 +30,6 @@ Route::get('/admin','AdminController@index');
 Route::get('/emplist','AdminController@emplist');
 Route::get('/userlist','AdminController@userlist');
 Route::get('/report','AdminController@report');
+Route::get('/feedback','AdminController@feedback');
 
 Route::get('/addemp','AdminController@addemployee');

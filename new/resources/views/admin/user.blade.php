@@ -64,6 +64,8 @@
 											<a href="{{url('/report')}}"><i class="fa fa-fw fa-area-chart"></i> Reports</a>
 									</li>
 									<li>
+										<a href="{{url('/feedback')}}"><i class="fa fa-fw fa-inbox"></i> Feedbacks</a>
+								</li>
 							</ul>
           </div>
           <!-- /.navbar-collapse -->

@@ -53,7 +53,7 @@
 								<li>
 										<a href="{{url('/admin')}}"><i class="fa fa-fw fa-dashboard"></i> Dashboard</a>
 								</li>
-								<li class="active">
+								<li>
 										<a href="{{url('/emplist')}}"><i class="fa fa-fw fa-male"></i> Employees</a>
 								</li>
 								<li>
@@ -62,9 +62,9 @@
 								<li>
 										<a href="{{url('/report')}}"><i class="fa fa-fw fa-area-chart"></i> Reports</a>
 								</li>
-								<li>
-									<a href="{{url('/feedback')}}"><i class="fa fa-fw fa-inbox"></i> Feedbacks</a>
-							</li>
+                <li class="active">
+                  <a href="{{url('/feedback')}}"><i class="fa fa-fw fa-inbox"></i> Feedbacks</a>
+              </li>
 						</ul>
           </div>
           <!-- /.navbar-collapse -->
@@ -78,53 +78,45 @@
               <div class="row">
                   <div class="col-lg-12">
                       <h1 class="page-header">
-                          Manage <small> employees</small>
+                          Feedbacks
                       </h1>
                       <ol class="breadcrumb">
                           <li class="active">
-                              <i class="fa fa-list"></i> Employee list
+                              <i class="fa fa-folder-open"></i> Know your Customers !
                           </li>
                       </ol>
                   </div>
               </div>
+							<!--content-->
+							<div class="row">
+                  <div class="col-lg-12">
+										<table class="table table-striped">
+											<tr>
+												<th>Date</th>
+												<th>Name</th>
+												<th>Email</th>
+												<th>Phone</th>
+												<th>Message</th>
+												<th>Reply</th>
+											</tr>
+                     @foreach($feedbacks as $feedback)
+											<tr>
+												<td>11/2/3</td>
+												<td>{{$feedback->name}}</td>
+												<td>{{$feedback->email}}</td>
+												<td>{{$feedback->phone}}</td>
+												<td>{{$feedback->message}}</td>
+												<td>
+													<a href="#" class="btn btn-default"><i class="fa fa-mail-reply"></i></a>
+												</td>
+											</tr>
+											@endforeach
+											</table>
+
+									</div>
+								</div>
 
 
-              <div class="row">
-                    <div class="col-md-12">
-                      <table class="table table-striped">
-                        <tr>
-                          <th>Name</th>
-                          <th>Gender</th>
-                          <th>Email</th>
-                          <th>Designation</th>
-                          <th>Links</th>
-                          <th>Status</th>
-                        </tr>
-												@foreach($users as $user)
-                        <tr>
-                          <td>{{$user->fname}} {{$user->lname}}</td>
-                          <td>{{$user->gender}}</td>
-                          <td>{{$user->email}}</td>
-                          <td>Manager</td>
-                          <td>
-                            <a href="#" class="btn btn-default">Edit</a>
-                            <a href="#" class="btn btn-default">Delete</a>
-                          </td>
-                          <td>                                <a href="#" class="btn btn-default">Details</a></td>
-                        </tr>
-												@endforeach
-                        </table>
-
-                      <a href="{{url('/addemp')}}" class="btn btn-default">Add New Employee</a>
-
-                    </div>
-                  </div>
-                </div>
-              </div>
-
-              @endsection
-
-              @section('script')
 
               <script src="js/jquery.js"></script>
 

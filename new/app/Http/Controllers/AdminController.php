@@ -7,6 +7,7 @@ use Illuminate\Http\Request;
 use App\Http\Requests;
 use App\Http\Controllers\Controller;
 use App\User;
+use App\Feedback;
 use Auth;
 
 class AdminController extends Controller
@@ -31,6 +32,12 @@ class AdminController extends Controller
   public function report(){
     return view('admin.report',['user'=>Auth::user()]);
   }
+  public function feedback(){
+    $feedbacks=Feedback::all();
+    return view('admin.feedback',['feedbacks'=>$feedbacks,'user'=>Auth::user()]);
+  }
+
+
   public function addemployee(){
     return view('admin.addempl',['user'=>Auth::user()]);
   }
