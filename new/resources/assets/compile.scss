@@ -1,0 +1,31 @@
+@mixin icontype($fontsize,$wrapsize) {
+  font-size: $fontsize;//rems
+  width:$wrapsize;
+  height: $wrapsize;
+  &:before{
+    line-height: $wrapsize;
+    text-align: center;
+    display: block;
+  }
+}
+
+.fa-l{
+  @include icontype(2rem,4rem);
+}
+
+.fa-m{
+    @include icontype(1.3rem,2.5rem);
+}
+
+.fa-s{
+  @include icontype(1.5rem,3rem);
+}
+
+.fa-round{
+  border-radius: 100%;
+  background: #edeff0;
+  color:#fff;
+  &:hover{
+    background: #ffffff;
+  }
+}

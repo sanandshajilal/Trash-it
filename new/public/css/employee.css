@@ -1,8 +1,15 @@
+
+
 body
 {
   height: 100%;
   background-color: white;
 }
+
+.emp_body{
+  background-image: url(../img/empbg.jpg);
+}
+
 .nav{
   float: right;
 }
@@ -39,11 +46,10 @@ body
 
 .form-group input,
 .form-group textarea {
-    padding: 20px;
+    height: 45px;
 }
 .form-group select{
   height: 42px;
-  width: 100px;
 }
 .btn-default{
   margin-top: 20px;

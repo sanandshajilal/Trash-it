@@ -54,105 +54,24 @@
     <div class="content" ng-controller="Controller">
 	   <div class="container-fluid">
     	<div class="row">
-		    <div class="col-lg-3 col-md-3 col-sm-3"></div>
-		    <div class="col-lg-6 col-md-6 col-sm-6">
 
-					<div class="section-subtitle">
-	          <h2>Pickup Details</h2>
-	          <img src="{{url('img/shape.png')}}" alt="">
-	        </div>
+        <div class="col-md-6 col-md-offset-3" style="color:white">
 
-	        <div class="row">
-	          <div class="col-lg-8 col-md-8 col-sm-8">
-
-							<ul ng-show="error" class="alert alert-danger">
-								<li>Error.</li>
-							</ul>
-
-			        <form id="pickupform" name="pickup_form" action="pickup.php">
-				        <div class="form-group">
-									<!-- sorting logic is left for you -->
-									<select ng-model="booking_id" class="form-control">
-										<option disabled="true" selected="true">Booking</option>
-										@foreach($bookings as $key => $value)
-											<option value="{{$value->id}}">{{$value->id}} : {{$value->name}}</option>
-										@endforeach
-									</select>
-				        </div>
-				        <div class="row">
-				          <div class="col-lg-6">
-				            <div class="form-group">
-				                <input ng-model="amount" type="number" class="form-control" placeholder="Amount Paid *" id="amntpaid">
-				            </div>
-				          </div>
-				          <div class="col-lg-6">
-				            <div class="form-group">
-				                <input type="number" class="form-control" placeholder="Confirm *" id="camnt">
-				            </div>
-				          </div>
-				        </div>
-								<!-- dynamic fields -->
-
-								<!-- List of added items -->
-								<ul class="list-group">
-			            <li class="list-group-item" ng-repeat="item in items">
-										@{{item.name}} : @{{item.weight}}
-			             <button type="button" ng-click="removeItem($index)" class="close"><span>&times;</span></button>
-			            </li>
-			          </ul>
-								<!--end of list -->
-
-								<div class="row" ng-show="visible">
-				          <div class="col-md-5 col-sm-5">
-				            <div class="form-group">
-											<select
-														ng-model="itemname"
-														ng-options="option.name for option in allitems" class="form-control">
-											</select>
-				            </div>
-				      		</div>
-						      <div class="col-md-3 col-sm-3">
-						        <div class="form-group">
-											<select class="form-control" ng-init="weight = weights[0]"
-														ng-model="weight"
-														ng-options="option.w for option in weights">
-											</select>
-						        </div>
-					      	</div>
-									<div class="col-md-2 col-sm-2">
-										<a ng-click="pushItem(itemname,weight)" class="btn btn-default"><i class="fa fa-plus"></i> Add Item</a>
-									</div>
-					      </div>
-
-					      <div class="form-group">
-					           <button type="button" ng-click="formsubmit()" class="btn btn-default btn-submit">Submit</button>
-					      </div>
-							</form>
-   				  </div>
-
-					  <!-- Right Section -->
-
-						<div class="col-lg-4">
-						  <div class="thumbnail">
-						    <h4><i class="fa fa-user"></i>Customer Details </h4>
-						  	<hr/>
-							  <div class="thumbdetails">
-									<h5><b>Name :</b><i>  {{$user->fname}}</i></h5>
-									<h5><b>Address :</b><i>  #11/1 1st Main 5th Cross Bharathi Layout, SG Palaya, Koramangala</i></h5>
-									<h5><b>Email :</b><i>  {{$user->email}}</i></h5>
-									<h5><b>Phone :</b><i>  740540640</i></h5>
-								</div>
-						  </div>
-						</div>
-
-						<div class="col-lg-3 col-md-3"></div>
-				  </div>
-				</div>
-			</div>
-		</div>
-	</div>
+          <h3>Pick Up Details</h3>
+          <h4>Status: Success</h4>
+          <h4>Amount : {{$pickup->amount}}</h4>
+          <h4>Booking id: {{$pickup->booking_id}}</h4>
+          <ul class="list-group" style="color:#000">
+            @foreach($pickup->items as $key => $value)
+              <li class="list-group-item">{{$value->name}} : {{$value->weight}}</li>
+            @endforeach
+          </ul>
 
 
+        </div>
+		  </div>
+    </div>
+  </div>
 
 @endsection
 

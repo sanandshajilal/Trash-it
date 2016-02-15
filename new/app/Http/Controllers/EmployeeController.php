@@ -7,14 +7,37 @@ use Illuminate\Http\Request;
 
 use App\Http\Requests;
 use App\Http\Controllers\Controller;
+use App\Item;
+use App\Booking;
+use App\Pickup;
 
 class EmployeeController extends Controller
 {
 
     public function index(){
-      return view('employee',['user'=>Auth::user()]);
+      $items = Item::all();
+      $bookings = Booking::all();
+      return view('employee',['user'=>Auth::user(),'items'=>$items,'bookings'=>$bookings]);
     }
+
+    /* should use an appropriate controller for items. But for a quick hack */
+
+    public function items(){
+      $items = Item::all();
+      return $items;
+    }
+
+    public function pickup(Request $request){
+      return Pickup::create($request->all());
+    }
+
+    public function viewpickup($id){
+      $pickup = Pickup::find($id);
+      $pickup->items= json_decode($pickup->items);
+      return view('employee.pickup',['pickup'=>$pickup,'user'=>Auth::user()]);
+    }
+
     public function empprofile(){
-      return view('/employee/empprofile',['user'=>Auth::user()]);
+      return view('employee.empprofile',['user'=>Auth::user()]);
     }
 }

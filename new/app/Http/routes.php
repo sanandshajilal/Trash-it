@@ -23,8 +23,12 @@ Route::post('/booking','MainController@booking');
 /* logged in pages */
 Route::get('/employee','EmployeeController@index');
 Route::get('/empprofile','EmployeeController@empprofile');
+Route::post('/pickup','EmployeeController@pickup');
+Route::get('/pickup/{id}','EmployeeController@viewpickup');
+
 Route::get('/customer','CustomerController@index');
 Route::post('/customer/booking','CustomerController@booking');
+
 
 Route::get('/admin','AdminController@index');
 Route::get('/emplist','AdminController@emplist');
@@ -32,5 +36,11 @@ Route::get('/userlist','AdminController@userlist');
 Route::get('/report','AdminController@report');
 Route::get('/feedback','AdminController@feedback');
 
+
 Route::get('/addemp','AdminController@addemployee');
 Route::get('/delemp/{id}','AdminController@delemployee');
+
+
+/*items*/
+
+Route::get('/items','EmployeeController@items');

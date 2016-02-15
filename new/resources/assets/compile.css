@@ -1,0 +1,35 @@
+.fa-l {
+  font-size: 2rem;
+  width: 4rem;
+  height: 4rem; }
+  .fa-l:before {
+    line-height: 4rem;
+    text-align: center;
+    display: block; }
+
+.fa-m {
+  font-size: 1.3rem;
+  width: 2.5rem;
+  height: 2.5rem; }
+  .fa-m:before {
+    line-height: 2.5rem;
+    text-align: center;
+    display: block; }
+
+.fa-s {
+  font-size: 1.5rem;
+  width: 3rem;
+  height: 3rem; }
+  .fa-s:before {
+    line-height: 3rem;
+    text-align: center;
+    display: block; }
+
+.fa-round {
+  border-radius: 100%;
+  background: #edeff0;
+  color: #fff; }
+  .fa-round:hover {
+    background: #ffffff; }
+
+/*# sourceMappingURL=compile.css.map */
