@@ -94,12 +94,13 @@
 							<div class="row">
 								<div class="col-md-6">
 
-                <form id="addemp" name="addemp_form" action="addemp.php">
+                {!! Form::open(['url'=>'newitem','id'=>'addNewItemForm']) !!}
+
                 <div class="form-group">
-                    <input type="text" class="form-control" placeholder="Item Name *" id="name">
+                    <input type="text" class="form-control" placeholder="Item Name *" name="name">
                 </div>
                 <div class="form-group">
-                    <input type="text" class="form-control" placeholder="Price Per Kg *" id="name">
+                    <input type="text" class="form-control" placeholder="Price Per Kg *" name="price">
                 </div>
                 <div>
                     <button type="submit" style="float:right" class="btn btn-default"><i class="fa fa-plus"></i></button>

@@ -44,7 +44,7 @@ Route::get('/addemp','AdminController@addemployee');
 Route::get('/delemp/{id}','AdminController@delemployee');
 
 Route::get('/additem','AdminController@additem');
-
+Route::post('/newitem','AdminController@newitem');
 
 /*items*/
 

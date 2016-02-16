@@ -16,6 +16,7 @@ class CreateItemsTable extends Migration {
 		{
 			$table->increments('id');
 			$table->string('name');
+			$table->integer('price');
 		});
 	}
 

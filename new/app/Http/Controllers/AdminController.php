@@ -61,7 +61,12 @@ class AdminController extends Controller
   public function additem(){
     return view('admin.additem',['user'=>Auth::user()]);
   }
-
+  function newitem(Request $request){
+    $values = $request->all();
+    $item = Item::create($values);
+    $items=Item::all();
+    return view('admin.item',['newitem' => $item,'items'=>$items,'user'=>Auth::user()]);
+  }
 
 
 
