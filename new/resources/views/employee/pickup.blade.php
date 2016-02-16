@@ -11,7 +11,7 @@
 
 @section('content')
 
-<body class="emp_body" ng-app="app">
+<body class="emp_body" ng-app="app" style="background-image: url({{url('img/empbg.jpg')}})">
   	<nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
         <div class="container">
             <!-- Brand and toggle get grouped for better mobile display -->

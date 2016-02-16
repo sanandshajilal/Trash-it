@@ -59,6 +59,9 @@
 								<li>
 										<a href="{{url('/userlist')}}"><i class="fa fa-fw fa-users"></i> Users</a>
 								</li>
+								<li>
+										<a href="{{url('/itemlist')}}"><i class="fa fa-fw fa-trash"></i> Items</a>
+								</li>
 								<li  class="active">
 										<a href="{{url('/report')}}"><i class="fa fa-fw fa-area-chart"></i> Reports</a>
 								</li>

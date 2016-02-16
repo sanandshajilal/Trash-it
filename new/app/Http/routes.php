@@ -29,16 +29,21 @@ Route::get('/pickup/{id}','EmployeeController@viewpickup');
 Route::get('/customer','CustomerController@index');
 Route::post('/customer/booking','CustomerController@booking');
 
+Route::get('/stockmaster','StockMasterController@index');
+
 
 Route::get('/admin','AdminController@index');
 Route::get('/emplist','AdminController@emplist');
 Route::get('/userlist','AdminController@userlist');
+Route::get('/itemlist','AdminController@itemlist');
 Route::get('/report','AdminController@report');
 Route::get('/feedback','AdminController@feedback');
 
 
 Route::get('/addemp','AdminController@addemployee');
 Route::get('/delemp/{id}','AdminController@delemployee');
+
+Route::get('/additem','AdminController@additem');
 
 
 /*items*/

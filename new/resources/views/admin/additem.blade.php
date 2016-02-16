@@ -59,15 +59,15 @@
 								<li>
 										<a href="{{url('/userlist')}}"><i class="fa fa-fw fa-users"></i> Users</a>
 								</li>
-								<li>
+								<li  class="active">
 										<a href="{{url('/itemlist')}}"><i class="fa fa-fw fa-trash"></i> Items</a>
 								</li>
 								<li>
 										<a href="{{url('/report')}}"><i class="fa fa-fw fa-area-chart"></i> Reports</a>
 								</li>
-                <li class="active">
-                  <a href="{{url('/feedback')}}"><i class="fa fa-fw fa-inbox"></i> Feedbacks</a>
-              </li>
+								<li>
+									<a href="{{url('/feedback')}}"><i class="fa fa-fw fa-inbox"></i> Feedbacks</a>
+							</li>
 						</ul>
           </div>
           <!-- /.navbar-collapse -->
@@ -81,43 +81,30 @@
               <div class="row">
                   <div class="col-lg-12">
                       <h1 class="page-header">
-                          Feedbacks
+                          Add New Item
                       </h1>
                       <ol class="breadcrumb">
                           <li class="active">
-                              <i class="fa fa-folder-open"></i> Know your Customers !
+                              <i class="fa fa-plus"></i> New Item
                           </li>
                       </ol>
                   </div>
               </div>
-							<!--content-->
-							<div class="row">
-                  <div class="col-lg-12">
-										<table class="table table-striped">
-											<tr>
-												<th>Date</th>
-												<th>Name</th>
-												<th>Email</th>
-												<th>Phone</th>
-												<th>Message</th>
-												<th>Reply</th>
-											</tr>
-                     @foreach($feedbacks as $feedback)
-											<tr>
-												<td>11/2/3</td>
-												<td>{{$feedback->name}}</td>
-												<td>{{$feedback->email}}</td>
-												<td>{{$feedback->phone}}</td>
-												<td>{{$feedback->message}}</td>
-												<td>
-													<a href="#" class="btn btn-default"><i class="fa fa-mail-reply"></i></a>
-												</td>
-											</tr>
-											@endforeach
-											</table>
 
-									</div>
-								</div>
+							<div class="row">
+								<div class="col-md-6">
+
+                <form id="addemp" name="addemp_form" action="addemp.php">
+                <div class="form-group">
+                    <input type="text" class="form-control" placeholder="Item Name *" id="name">
+                </div>
+                <div class="form-group">
+                    <input type="text" class="form-control" placeholder="Price Per Kg *" id="name">
+                </div>
+                <div>
+                    <button type="submit" style="float:right" class="btn btn-default"><i class="fa fa-plus"></i></button>
+                </div>
+                </form>
 
 
 

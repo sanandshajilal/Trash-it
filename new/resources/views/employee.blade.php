@@ -11,7 +11,7 @@
 
 @section('content')
 
-<body class="emp_body" ng-app="app">
+<body class="emp_body" ng-app="app" style="background-image: url({{url('img/empbg.jpg')}})">
   	<nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
         <div class="container">
             <!-- Brand and toggle get grouped for better mobile display -->
@@ -71,8 +71,8 @@
 
 			        <form id="pickupform" name="pickup_form" action="pickup.php">
 				        <div class="form-group">
-									<!-- sorting logic is left for you -->
-									<select ng-model="booking_id" class="form-control">
+									<!-- sorting logic has to be done -->
+									<select ng-model="booking_id" class="form-control" style="width:425px;">
 										<option disabled="true" selected="true">Booking</option>
 										@foreach($bookings as $key => $value)
 											<option value="{{$value->id}}">{{$value->id}} : {{$value->name}}</option>
@@ -107,7 +107,7 @@
 				            <div class="form-group">
 											<select
 														ng-model="itemname"
-														ng-options="option.name for option in allitems" class="form-control">
+														ng-options="option.name for option in allitems" class="form-control" style="width:170px;">
 											</select>
 				            </div>
 				      		</div>

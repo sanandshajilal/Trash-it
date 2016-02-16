@@ -8,6 +8,7 @@ use App\Http\Requests;
 use App\Http\Controllers\Controller;
 use App\User;
 use App\Feedback;
+use App\Item;
 use Auth;
 
 class AdminController extends Controller
@@ -29,6 +30,10 @@ class AdminController extends Controller
                ->get();
     return view('admin.user',['users'=>$users,'user'=>Auth::user()]);
   }
+  public function itemlist(){
+    $items=Item::all();
+    return view('admin.item',['items'=>$items,'user'=>Auth::user()]);
+  }
   public function report(){
     return view('admin.report',['user'=>Auth::user()]);
   }
@@ -36,6 +41,7 @@ class AdminController extends Controller
     $feedbacks=Feedback::all();
     return view('admin.feedback',['feedbacks'=>$feedbacks,'user'=>Auth::user()]);
   }
+
 
 
   public function addemployee(){
@@ -51,4 +57,12 @@ class AdminController extends Controller
                ->get();
     return view('admin.employee',['users'=>$users,'user'=>Auth::user()]);
   }
+
+  public function additem(){
+    return view('admin.additem',['user'=>Auth::user()]);
+  }
+
+
+
+
 }
