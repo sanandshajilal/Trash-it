@@ -24,22 +24,17 @@
                   <div class="section-subtitle">
                       <h2>Request Form</h2>
                     </div>
-                    @if(isset($user)&&$user)
-                      {!! Form::open(['url'=>'/customer/booking#service','id'=>"bookingForm",'novalidate'=>'']) !!}
-                    @else
-                        {!! Form::open(['url'=>'/booking#service','id'=>"bookingForm",'novalidate'=>'']) !!}
-                    @endif
-
                     @if(isset($booking))
                       <h3>Booking done successfully</h3>
                       <p>Booking pickdate: {{$booking->pickdate}}</p>
-                      <!-- Customization is left for you -->
+                      <!-- Customization has to be done -->
                     @endif
-
-                      <!-- try facades. Life is simple with em. -->
+                    @if(isset($user)&&$user)
+                      {!! Form::open(['url'=>'/customer/booking#service','id'=>"bookingForm",'novalidate'=>'']) !!}
+                      <!-- Booking Form when user is not logged in -->
                       <div class="col-md-6">
                                <div class="form-group">
-                                    <input type="text" class="form-control" placeholder="Name *" name="name">
+                                    <input type="text" class="form-control" placeholder="Name *" value="{{$user->fname}} {{$user->lname}}" name="name">
                                 </div>
 
                                 <div class="form-group">
@@ -51,7 +46,6 @@
                                   </div>
 
                                   <div class="form-group">
-                                       <!--<input type="text" class="form-control" placeholder="City *" id="city">-->
                                        <select class="form-control" name="place">
                                          <option value="Koramangala">Koramangala</option>
                                          <option value="Indiranagar">Indiranagar</option>
@@ -70,7 +64,7 @@
                               </div>
                                <div class="col-md-6">
                                  <div class="form-group">
-                                     <input type="email" class="form-control" placeholder="Email *" name="email">
+                                     <input type="email" class="form-control" placeholder="Email *" value="{{$user->email}}" name="email">
                                  </div>
                                  <div class="form-group">
                                      <input type="tel" class="form-control" placeholder="Phone *" name="phone">
@@ -89,6 +83,67 @@
                                     <button type="submit" class="btn btn-login">Submit</button>
                                 </div>
                     </form>
+
+                     @else
+                        {!! Form::open(['url'=>'/booking#service','id'=>"bookingForm",'novalidate'=>'']) !!}
+
+                        <!-- Booking Form when user is not logged in -->
+                        <div class="col-md-6">
+                                 <div class="form-group">
+                                      <input type="text" class="form-control" placeholder="Name *" name="name">
+                                  </div>
+
+                                  <div class="form-group">
+                                       <input type="text" class="form-control" placeholder="Address Line 1 *" name="adrsl1">
+                                   </div>
+
+                                   <div class="form-group">
+                                        <input type="text" class="form-control" placeholder="Address Line 2 *" name="adrsl2">
+                                    </div>
+
+                                    <div class="form-group">
+                                         <select class="form-control" name="place">
+                                           <option value="Koramangala">Koramangala</option>
+                                           <option value="Indiranagar">Indiranagar</option>
+                                           <option value="Jayanagar">Jayanagar</option>
+                                           <option value="Shanthinagar">Shanthinagar</option>
+                                           <option value="Shivajinagar">Shivajinagar</option>
+                                           <option value="Basavanagudi">Basavanagudi</option>
+                                           <option value="Malleshwaram">Malleshwaram</option>
+                                         </select>
+                                     </div>
+
+                                     <div class="form-group">
+                                          <input type="text" class="form-control" placeholder="Pincode *" name="pin">
+                                      </div>
+
+                                </div>
+                                 <div class="col-md-6">
+                                   <div class="form-group">
+                                       <input type="email" class="form-control" placeholder="Email *" name="email">
+                                   </div>
+                                   <div class="form-group">
+                                       <input type="tel" class="form-control" placeholder="Phone *" name="phone">
+                                   </div>
+                                   <div class="form-group">
+                                       <input type="date" class="form-control" placeholder="Pickup Date" name="pickdate">
+                                   </div>
+                                  <div class="form-group">
+                                      <textarea class="form-control" placeholder="Remarks" name="remarks"></textarea>
+                                  </div>
+
+                                  </div>
+                                  <div class="clearfix"></div>
+                                  <div class=" ">
+                                      <div id="success"></div>
+                                      <button type="submit" class="btn btn-login">Submit</button>
+                                  </div>
+                      </form>
+                    @endif
+
+
+
+
               </div>
         </div>
     </div>
