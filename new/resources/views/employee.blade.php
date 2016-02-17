@@ -61,7 +61,6 @@
 	          <h2>Pickup Details</h2>
 	          <img src="{{url('img/shape.png')}}" alt="">
 	        </div>
-
 	        <div class="row">
 	          <div class="col-lg-8 col-md-8 col-sm-8">
 
@@ -73,9 +72,12 @@
 				        <div class="form-group">
 									<!-- sorting logic has to be done -->
 									<select ng-model="booking_id" class="form-control" style="width:425px;">
-										<option disabled="true" selected="true">Booking</option>
+										<option disabled="true" selected="true">*** Pickups for {{$date}} ***</option>
 										@foreach($bookings as $key => $value)
+										  @if($value->pickdate==$date)
 											<option value="{{$value->id}}">{{$value->id}} : {{$value->name}}</option>
+											@endif
+
 										@endforeach
 									</select>
 				        </div>
