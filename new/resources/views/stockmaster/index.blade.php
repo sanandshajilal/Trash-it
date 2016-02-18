@@ -69,11 +69,11 @@
               <div class="row">
                   <div class="col-lg-12">
                       <h1 class="page-header">
-                          Delayed Pickups <small>// Following pickups where not done as per scheduled</small>
+                          Delayed Pickups <small> Need Attention !</small>
                       </h1>
                       <ol class="breadcrumb">
                           <li class="active">
-                              <i class="fa fa-list"></i> Pickup Delayed
+                              <i class="fa fa-list"></i> Following pickups where not done as per scheduled
                           </li>
                       </ol>
                   </div>
@@ -107,6 +107,54 @@
                         @endforeach
                         @endforeach
                         </table>
+
+
+                        <div class="row">
+                            <div class="col-lg-12">
+                                <h1 class="page-header">
+                                    Completed Pickups <small> </small>
+                                </h1>
+                                <ol class="breadcrumb">
+                                    <li class="active">
+                                        <i class="fa fa-list"></i> Following pickups where completed as per scheduled
+                                    </li>
+                                </ol>
+                            </div>
+                        </div>
+
+                        <div class="row">
+                              <div class="col-md-12">
+                                <table class="table table-striped">
+                                  <tr>
+                                    <th>Pickup Id</th>
+                                    <th>Booking Id</th>
+                                    <th>Name</th>
+                                    <th>Email</th>
+                                    <th>Phone No</th>
+                                    <th>Completed Date</th>
+                                    <th>Amount Paid</th>
+                                    <th>Links</th>
+                                  </tr>
+                                  @foreach($bookings as $booking)
+                                  @foreach($pickups as $pickup)
+                                  @if($booking->id==$pickup->booking_id)
+
+                                  <tr>
+                                    <td>{{$pickup->id}}</td>
+                                    <td>{{$pickup->booking_id}}</td>
+                                    <td>{{$booking->name}}</td>
+                                    <td>{{$booking->email}}</td>
+                                    <td>{{$booking->phone}}</td>
+                                    <td>{{$booking->pickdate}}</td>
+                                    <td>{{$pickup->amount}}</td>
+                                    <td>
+                                      <a href="#" class="btn btn-default">Details</a>
+                                    </td>
+                                  </tr>
+                                  @endif
+                                  @endforeach
+                                  @endforeach
+                                  </table>
 
 
 
