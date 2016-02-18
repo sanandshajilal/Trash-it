@@ -71,7 +71,7 @@
 			        <form id="pickupform" name="pickup_form" action="pickup.php">
 				        <div class="form-group">
 									<!-- sorting logic has to be done -->
-									<select ng-model="booking_id" class="form-control" style="width:425px;">
+									<select ng-model="booking_id" ng-change="user_details" class="form-control" style="width:425px;">
 										<option disabled="true" selected="true">*** Pickups for {{$date}} ***</option>
 										@foreach($bookings as $key => $value)
 										  @if($value->pickdate==$date)
@@ -170,6 +170,8 @@
 <script src="{{url('js/angular/angular-resource.min.js')}}"></script>
 <script>
 /* Behold some awesomeness here */
+
+
 
 (function() {
 	'use strict';

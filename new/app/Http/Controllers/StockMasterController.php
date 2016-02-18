@@ -20,8 +20,9 @@ class StockMasterController extends Controller {
 	 public function index(){
  		$items = Item::all();
  		$bookings = Booking::all();
-		$date=date('Y/m/d');
- 		return view('stockmaster.index',['user'=>Auth::user(),'items'=>$items,'bookings'=>$bookings,'date'=>$date]);
+		$pickups = Pickup::all();
+		$date=date('Y-m-d');
+ 		return view('stockmaster.index',['user'=>Auth::user(),'items'=>$items,'bookings'=>$bookings,'pickups'=>$pickups,'date'=>$date]);
  	}
 
 	/**
