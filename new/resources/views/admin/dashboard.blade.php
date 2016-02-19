@@ -103,12 +103,12 @@
                                         <i class="fa fa-comments fa-5x"></i>
                                     </div>
                                     <div class="col-xs-9 text-right">
-                                        <div class="huge">26</div>
-                                        <div>New Messages!</div>
+                                        <div class="huge">{{$feedcount}}</div>
+                                        <div>Messages !</div>
                                     </div>
                                 </div>
                             </div>
-                            <a href="#">
+                            <a href="feedback">
                                 <div class="panel-footer">
                                     <span class="pull-left">View Details</span>
                                     <span class="pull-right"><i class="fa fa-arrow-circle-right"></i></span>
@@ -125,8 +125,8 @@
                                         <i class="fa fa-trash fa-5x"></i>
                                     </div>
                                     <div class="col-xs-9 text-right">
-                                        <div class="huge">12</div>
-                                        <div>New Pickups!</div>
+                                        <div class="huge">{{$pickcount}}</div>
+                                        <div> Pickups !</div>
                                     </div>
                                 </div>
                             </div>
@@ -168,9 +168,12 @@
                                     <div class="col-xs-3">
                                         <i class="fa fa-bank fa-5x"></i>
                                     </div>
+																		@foreach($pickups as $pickup)
+																		<!--{{$total=$total+$pickup->amount}}-->
+																		@endforeach
                                     <div class="col-xs-9 text-right">
-                                        <div class="huge">13k</div>
-                                        <div>Monthly Profit!</div>
+                                        <div class="huge">{{$total}}</div>
+                                        <div>Total Amount Paid !</div>
                                     </div>
                                 </div>
                             </div>
@@ -231,54 +234,14 @@
                                             </tr>
                                         </thead>
                                         <tbody>
+																					@foreach($pickups as $pickup)
                                             <tr>
-                                                <td>3326</td>
+                                                <td>{{$pickup->id}}</td>
                                                 <td>10/21/2013</td>
                                                 <td>3:29 PM</td>
-                                                <td>321.33</td>
+                                                <td>{{$pickup->amount}}</td>
                                             </tr>
-                                            <tr>
-                                                <td>3325</td>
-                                                <td>10/21/2013</td>
-                                                <td>3:20 PM</td>
-                                                <td>234.34</td>
-                                            </tr>
-                                            <tr>
-                                                <td>3324</td>
-                                                <td>10/21/2013</td>
-                                                <td>3:03 PM</td>
-                                                <td>724.17</td>
-                                            </tr>
-                                            <tr>
-                                                <td>3323</td>
-                                                <td>10/21/2013</td>
-                                                <td>3:00 PM</td>
-                                                <td>23.71</td>
-                                            </tr>
-                                            <tr>
-                                                <td>3322</td>
-                                                <td>10/21/2013</td>
-                                                <td>2:49 PM</td>
-                                                <td>8345.23</td>
-                                            </tr>
-                                            <tr>
-                                                <td>3321</td>
-                                                <td>10/21/2013</td>
-                                                <td>2:23 PM</td>
-                                                <td>245.12</td>
-                                            </tr>
-                                            <tr>
-                                                <td>3320</td>
-                                                <td>10/21/2013</td>
-                                                <td>2:15 PM</td>
-                                                <td>5663.54</td>
-                                            </tr>
-                                            <tr>
-                                                <td>3319</td>
-                                                <td>10/21/2013</td>
-                                                <td>2:13 PM</td>
-                                                <td>943.45</td>
-                                            </tr>
+																						@endforeach
                                         </tbody>
                                     </table>
                                 </div>

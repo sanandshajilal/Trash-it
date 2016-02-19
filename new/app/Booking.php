@@ -12,4 +12,5 @@ class Booking extends Model
     protected $fillable = [
         'name', 'adrsl1', 'adrsl2','place','pin','email','phone','pickdate','remarks'
     ];
+    
 }

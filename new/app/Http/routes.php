@@ -30,6 +30,8 @@ Route::get('/customer','CustomerController@index');
 Route::post('/customer/booking','CustomerController@booking');
 
 Route::get('/stockmaster','StockMasterController@index');
+Route::get('/sales','StockMasterController@sales');
+Route::post('/newsale','StockMasterController@newsale');
 
 
 Route::get('/admin','AdminController@index');

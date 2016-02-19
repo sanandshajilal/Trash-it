@@ -77,7 +77,6 @@
 										  @if($value->pickdate==$date)
 											<option value="{{$value->id}}">{{$value->id}} : {{$value->name}}</option>
 											@endif
-
 										@endforeach
 									</select>
 				        </div>

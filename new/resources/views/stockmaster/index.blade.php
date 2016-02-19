@@ -54,7 +54,7 @@
 										<a href="{{url('/stockmaster')}}"><i class="fa fa-fw  fa-clock-o"></i> Pickups</a>
 								</li>
                 <li>
-										<a href="{{url('/stockmaster')}}"><i class="fa fa-fw fa-money"></i> Sales</a>
+										<a href="{{url('/sales')}}"><i class="fa fa-fw fa-money"></i> Sell</a>
 								</li>
 						</ul>
           </div>
@@ -91,8 +91,7 @@
                           <th>Links</th>
                         </tr>
                         @foreach($bookings as $booking)
-                        @foreach($pickups as $pickup)
-                        @if($booking->pickdate<$date && $booking->id!=$pickup->booking_id)
+                        @if($booking->pickdate<$date)
                         <tr>
                           <td>{{$booking->id}}</td>
                           <td>{{$booking->name}}</td>
@@ -104,8 +103,8 @@
                           </td>
                         </tr>
                         @endif
-                        @endforeach
-                        @endforeach
+												@endforeach
+
                         </table>
 
 

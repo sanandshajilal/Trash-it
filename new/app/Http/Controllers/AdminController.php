@@ -9,6 +9,8 @@ use App\Http\Controllers\Controller;
 use App\User;
 use App\Feedback;
 use App\Item;
+use App\Booking;
+use App\Pickup;
 use Auth;
 
 class AdminController extends Controller
@@ -16,7 +18,11 @@ class AdminController extends Controller
 
 
   public function index(){
-    return view('admin.dashboard',['user'=>Auth::user()]);
+    $pickups=Pickup::all();
+    $feedcount=Feedback::count();
+    $pickcount=Pickup::count();
+    $total=0;
+    return view('admin.dashboard',['total'=>$total,'pickcount'=>$pickcount,'feedcount'=>$feedcount,'pickups'=>$pickups,'user'=>Auth::user()]);
   }
   public function emplist(){
     $users=User::where('type','=', 0)

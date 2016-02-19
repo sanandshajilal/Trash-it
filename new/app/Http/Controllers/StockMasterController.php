@@ -8,6 +8,7 @@ use Illuminate\Http\Request;
 use App\Item;
 use App\Booking;
 use App\Pickup;
+use App\Sale;
 use Auth;
 
 class StockMasterController extends Controller {
@@ -25,68 +26,18 @@ class StockMasterController extends Controller {
  		return view('stockmaster.index',['user'=>Auth::user(),'items'=>$items,'bookings'=>$bookings,'pickups'=>$pickups,'date'=>$date]);
  	}
 
-	/**
-	 * Show the form for creating a new resource.
-	 *
-	 * @return Response
-	 */
-	public function create()
-	{
-		//
-	}
+public function sales(){
+	$items = Item::all();
+	return view('stockmaster.sales',['items'=>$items,'user'=>Auth::user()]);
+}
 
-	/**
-	 * Store a newly created resource in storage.
-	 *
-	 * @return Response
-	 */
-	public function store()
-	{
-		//
-	}
+function newsale(Request $request){
+	$values = $request->all();
+	$sale = Sale::create($values);
+	$sales = Sale::all();
+	$items = Item::all();
+	return view('stockmaster.sales',['newsale'=>$sale,'items'=>$items,'user'=>Auth::user()]);
+}
 
-	/**
-	 * Display the specified resource.
-	 *
-	 * @param  int  $id
-	 * @return Response
-	 */
-	public function show($id)
-	{
-		//
-	}
-
-	/**
-	 * Show the form for editing the specified resource.
-	 *
-	 * @param  int  $id
-	 * @return Response
-	 */
-	public function edit($id)
-	{
-		//
-	}
-
-	/**
-	 * Update the specified resource in storage.
-	 *
-	 * @param  int  $id
-	 * @return Response
-	 */
-	public function update($id)
-	{
-		//
-	}
-
-	/**
-	 * Remove the specified resource from storage.
-	 *
-	 * @param  int  $id
-	 * @return Response
-	 */
-	public function destroy($id)
-	{
-		//
-	}
 
 }
