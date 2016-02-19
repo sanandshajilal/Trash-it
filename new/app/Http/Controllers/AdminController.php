@@ -11,6 +11,7 @@ use App\Feedback;
 use App\Item;
 use App\Booking;
 use App\Pickup;
+use App\Sale;
 use Auth;
 
 class AdminController extends Controller
@@ -22,7 +23,10 @@ class AdminController extends Controller
     $feedcount=Feedback::count();
     $pickcount=Pickup::count();
     $total=0;
-    return view('admin.dashboard',['total'=>$total,'pickcount'=>$pickcount,'feedcount'=>$feedcount,'pickups'=>$pickups,'user'=>Auth::user()]);
+
+    $sales=Sale::all();
+    $salecount=Sale::count();
+    return view('admin.dashboard',['salecount'=>$salecount,'sales'=>$sales,'total'=>$total,'pickcount'=>$pickcount,'feedcount'=>$feedcount,'pickups'=>$pickups,'user'=>Auth::user()]);
   }
   public function emplist(){
     $users=User::where('type','=', 0)
