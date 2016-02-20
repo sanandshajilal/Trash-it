@@ -38,11 +38,11 @@
                                 </div>
 
                                 <div class="form-group">
-                                     <input type="text" class="form-control" placeholder="Address Line 1 *" name="adrsl1">
+                                     <input type="text" class="form-control" placeholder="Address Line 1 *"  name="adrsl1">
                                  </div>
 
                                  <div class="form-group">
-                                      <input type="text" class="form-control" placeholder="Address Line 2 *" name="adrsl2">
+                                      <input type="text" class="form-control" placeholder="Address Line 2 *"  name="adrsl2">
                                   </div>
 
                                   <div class="form-group">
@@ -58,7 +58,7 @@
                                    </div>
 
                                    <div class="form-group">
-                                        <input type="text" class="form-control" placeholder="Pincode *" name="pin">
+                                        <input type="text" class="form-control" placeholder="Pincode *"  name="pin">
                                     </div>
 
                               </div>
@@ -67,7 +67,7 @@
                                      <input type="email" class="form-control" placeholder="Email *" value="{{$user->email}}" name="email">
                                  </div>
                                  <div class="form-group">
-                                     <input type="tel" class="form-control" placeholder="Phone *" name="phone">
+                                     <input type="tel" class="form-control" placeholder="Phone *"  name="phone">
                                  </div>
                                  <div class="form-group">
                                      <input type="date" class="form-control" placeholder="Pickup Date" name="pickdate">

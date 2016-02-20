@@ -21,7 +21,7 @@
                                   <h4 class="name">Sanand S</h4>
                               </div>
                               <div class="timeline-body">
-                                  <p class="text-muted">Description goes here !</p>
+                                  <p class="text-muted">Being a final year undergraduate student in CME, Christ University Sanand is very keen to utilize his coding skills for the greater good of the society.Right from his school days,he had strong inclination and aptitude in designing and coding.</p>
                                   <ul class="list-inline social-buttons">
                                     <li><a href="#"><i class="fa fa-twitter"></i></a>
                                     </li>
@@ -43,7 +43,7 @@
                                   <h4 class="name">Livin Davis</h4>
                               </div>
                               <div class="timeline-body">
-                                  <p class="text-muted">Description goes here !</p>
+                                  <p class="text-muted">A strong drive for making a change led Livin to jumpstart his venture named Trash it along with Sanand. Currently he handles Business Development and Operations for Trash it.</p>
                                   <ul class="list-inline social-buttons">
                                     <li><a href="#"><i class="fa fa-twitter"></i></a>
                                     </li>
@@ -65,7 +65,7 @@
                                   <h4 class="subheading name"> Jibrael Jos</h4>
                               </div>
                               <div class="timeline-body">
-                                  <p class="text-muted">Description goes here !</p>
+                                  <p class="text-muted">We would like to express our special thanks of gratitude to oru guide Jibreal Jos, Associate Proffessor Christ University, who gave us efficiant guidance to do this project. </p>
                                   <ul class="list-inline social-buttons">
                                     <li><a href="#"><i class="fa fa-twitter"></i></a>
                                     </li>

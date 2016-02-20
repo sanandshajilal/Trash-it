@@ -50,7 +50,7 @@
                   <i class="fa fa-envelope-o fa-3x"></i>
                 </a>
                 <a href="#" class="btn btn-default">
-                  <i class="fa fa-laptop fa-3x"></i>
+                  <i class="fa fa-gear fa-3x"></i>
                 </a>
                 <a href="#" class="btn btn-default">
                   <i class="fa fa-cloud-upload fa-3x"></i>
@@ -100,45 +100,31 @@
             </div>
             <div class="user-menu-content">
                 <h3>
-                    Trending
+                    A bit more..
                 </h3>
                 <div class="row">
-                    <div class="col-md-6">
+                    <div class="col-md-12">
                         <div class="view">
-                            <div class="caption">
-                                <p>smething</p>
-                                <a href="" rel="tooltip" title="Appreciate"><span class="fa fa-heart-o fa-2x"></span></a>
-                                <a href="" rel="tooltip" title="View"><span class="fa fa-search fa-2x"></span></a>
-                            </div>
-                            <img src="{{url('img/about/4.jpg')}}" class="img-responsive">
+                          {!! Form::open(['url'=>'userdetails','id'=>'userDetailForm']) !!}
+
+                          <div class="form-group">
+                              <input type="text" class="form-control" placeholder="Address Line 1 " name="adrsl1">
+                          </div>
+                          <div class="form-group">
+                              <input type="text" class="form-control" placeholder="Address Line 2" name="adrsl2">
+                          </div>
+                          <div class="form-group">
+                              <input type="text" class="form-control" placeholder="Pin Code" name="pin">
+                          </div>
+                          <div class="form-group">
+                              <input type="text" class="form-control" placeholder="Tel No" name="phone">
+                          </div>
+                          <div>
+                              <button type="submit" style="float:right" class="btn btn-default">Submit</button>
+                          </div>
+                          </form>
                         </div>
-                        <div class="info">
-                            <p class="small" style="text-overflow: ellipsis">something</p>
-                            <p class="small coral text-right"><i class="fa fa-clock-o"></i> Posted Today | 10:42 A.M.</small>
-                        </div>
-                        <div class="stats turqbg">
-                            <span class="fa fa-heart-o"> <strong>47</strong></span>
-                            <span class="fa fa-eye pull-right"> <strong>137</strong></span>
-                        </div>
-                    </div>
-                    <div class="col-md-6">
-                        <div class="view">
-                            <div class="caption">
-                                <p>smething else !</p>
-                                <a href="" rel="tooltip" title="Appreciate"><span class="fa fa-heart-o fa-2x"></span></a>
-                                <a href="" rel="tooltip" title="View"><span class="fa fa-search fa-2x"></span></a>
-                            </div>
-                            <img src="{{url('img/about/4.jpg')}}" class="img-responsive">
-                        </div>
-                        <div class="info">
-                            <p class="small" style="text-overflow: ellipsis">An Awesome Title</p>
-                            <p class="small coral text-right"><i class="fa fa-clock-o"></i> Posted Today | 10:42 A.M.</small>
-                        </div>
-                        <div class="stats turqbg">
-                            <span class="fa fa-heart-o"> <strong>47</strong></span>
-                            <span class="fa fa-eye pull-right"> <strong>137</strong></span>
-                        </div>
-                    </div>
+
                 </div>
             </div>
             <div class="user-menu-content">

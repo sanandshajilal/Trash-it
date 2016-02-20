@@ -52,6 +52,8 @@ Route::post('/newitem','AdminController@newitem');
 Route::get('/addvendor','AdminController@addvendor');
 Route::post('/newvendor','AdminController@newvendor');
 
+Route::post('/userdetails','CustomerController@userdetails');
+
 /*items*/
 
 Route::get('/items','EmployeeController@items');
