@@ -107,9 +107,9 @@
                     </div>
                     <div class="form-group">
                       <select class="form-control" name="vendor_name">
-
-                        <option value="vendor name">vendor name</option>
-
+												@foreach($vendors as $vendor)
+                        <option value="{{$vendor->name}}">{{$vendor->name}}</option>
+												@endforeach
                       </select>
                      </div>
                      <div class="form-group">

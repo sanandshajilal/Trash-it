@@ -12,6 +12,7 @@ use App\Item;
 use App\Booking;
 use App\Pickup;
 use App\Sale;
+use App\Vendor;
 use Auth;
 
 class AdminController extends Controller
@@ -39,6 +40,10 @@ class AdminController extends Controller
                ->orderBy('id', 'desc')
                ->get();
     return view('admin.user',['users'=>$users,'user'=>Auth::user()]);
+  }
+  public function vendorlist(){
+    $vendors=Vendor::all();
+    return view('admin.vendor',['vendors'=>$vendors,'user'=>Auth::user()]);
   }
   public function itemlist(){
     $items=Item::all();
@@ -78,6 +83,15 @@ class AdminController extends Controller
     return view('admin.item',['newitem' => $item,'items'=>$items,'user'=>Auth::user()]);
   }
 
+  public function addvendor(){
+    return view('admin.addvendor',['user'=>Auth::user()]);
+  }
+  public function newvendor(Request $request){
+    $values=$request->all();
+    $vendor = Vendor::create($values);
+    $vendors = Vendor::all();
+    return view('admin.vendor',['newvendor'=>$vendor,'vendors'=>$vendors,'user'=>Auth::user()]);
+  }
 
 
 }

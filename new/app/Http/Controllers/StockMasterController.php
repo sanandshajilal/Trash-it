@@ -9,6 +9,7 @@ use App\Item;
 use App\Booking;
 use App\Pickup;
 use App\Sale;
+use App\Vendor;
 use Auth;
 
 class StockMasterController extends Controller {
@@ -28,7 +29,8 @@ class StockMasterController extends Controller {
 
 public function sales(){
 	$items = Item::all();
-	return view('stockmaster.sales',['items'=>$items,'user'=>Auth::user()]);
+	$vendors = Vendor::all();
+	return view('stockmaster.sales',['vendors'=>$vendors,'items'=>$items,'user'=>Auth::user()]);
 }
 
 function newsale(Request $request){
@@ -36,7 +38,8 @@ function newsale(Request $request){
 	$sale = Sale::create($values);
 	$sales = Sale::all();
 	$items = Item::all();
-	return view('stockmaster.sales',['newsale'=>$sale,'items'=>$items,'user'=>Auth::user()]);
+	$vendors = Vendor::all();
+	return view('stockmaster.sales',['vendors'=>$vendors,'newsale'=>$sale,'items'=>$items,'user'=>Auth::user()]);
 }
 
 

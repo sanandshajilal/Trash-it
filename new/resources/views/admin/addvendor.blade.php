@@ -59,13 +59,13 @@
 								<li>
 										<a href="{{url('/userlist')}}"><i class="fa fa-fw fa-users"></i> Users</a>
 								</li>
-								<li>
-										<a href="{{url('/vendorlist')}}"><i class="fa fa-fw  fa-suitcase"></i> Vendors</a>
-								</li>
+                <li class="active">
+                    <a href="{{url('/vendorlist')}}"><i class="fa fa-fw  fa-suitcase"></i> Vendors</a>
+                </li>
 								<li>
 										<a href="{{url('/itemlist')}}"><i class="fa fa-fw fa-trash"></i> Items</a>
 								</li>
-								<li  class="active">
+								<li>
 										<a href="{{url('/report')}}"><i class="fa fa-fw fa-area-chart"></i> Reports</a>
 								</li>
 								<li>
@@ -84,15 +84,37 @@
               <div class="row">
                   <div class="col-lg-12">
                       <h1 class="page-header">
-                          Monthly <small> reports</small>
+                           New Vendor
                       </h1>
                       <ol class="breadcrumb">
                           <li class="active">
-                              <i class="fa fa-bar-chart"></i> Financial Reports
+                              <i class="fa fa-plus"></i> Add new vendor
                           </li>
                       </ol>
                   </div>
               </div>
+
+              <div class="row">
+								<div class="col-md-6">
+
+                {!! Form::open(['url'=>'newvendor','id'=>'addNewVendorForm']) !!}
+
+                <div class="form-group">
+                    <input type="text" class="form-control" placeholder="Vendor Name *" name="name">
+                </div>
+                <div class="form-group">
+                    <input type="email" class="form-control" placeholder="Email *" name="email">
+                </div>
+                <div class="form-group">
+                    <input type="number" class="form-control" placeholder="Tel no *" name="phone">
+                </div>
+                <div>
+                    <button type="submit" style="float:right" class="btn btn-default"><i class="fa fa-plus"></i></button>
+                </div>
+                </form>
+
+
+
               @endsection
 
               @section('script')

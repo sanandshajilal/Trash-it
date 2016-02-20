@@ -59,13 +59,13 @@
 								<li>
 										<a href="{{url('/userlist')}}"><i class="fa fa-fw fa-users"></i> Users</a>
 								</li>
-								<li>
-										<a href="{{url('/vendorlist')}}"><i class="fa fa-fw  fa-suitcase"></i> Vendors</a>
-								</li>
+                <li class="active">
+                    <a href="{{url('/vendorlist')}}"><i class="fa fa-fw  fa-suitcase"></i> Vendors</a>
+                </li>
 								<li>
 										<a href="{{url('/itemlist')}}"><i class="fa fa-fw fa-trash"></i> Items</a>
 								</li>
-								<li  class="active">
+								<li>
 										<a href="{{url('/report')}}"><i class="fa fa-fw fa-area-chart"></i> Reports</a>
 								</li>
 								<li>
@@ -84,15 +84,48 @@
               <div class="row">
                   <div class="col-lg-12">
                       <h1 class="page-header">
-                          Monthly <small> reports</small>
+                          Manage <small> Vendors</small>
                       </h1>
                       <ol class="breadcrumb">
                           <li class="active">
-                              <i class="fa fa-bar-chart"></i> Financial Reports
+                              <i class="fa fa-list"></i> Vendor List
                           </li>
                       </ol>
                   </div>
               </div>
+
+              <div class="row">
+                    <div class="col-md-12">
+                      <table class="table table-striped">
+                        <tr>
+                          <th>Name</th>
+                          <th>Email</th>
+                          <th>Phone No</th>
+                          <th>Links</th>
+                          <th>Status</th>
+                        </tr>
+                        @foreach($vendors as $vendor)
+                        <tr>
+                          <td>{{$vendor->name}}</td>
+                          <td>{{$vendor->email}}</td>
+                          <td>{{$vendor->phone}}</td>
+                          <td>
+                            <a href="#" class="btn btn-default">Edit</a>
+                            <a href="delemp/{{$user->id}}" class="btn btn-default">Delete</a>
+                          </td>
+                          <td><a href="#" class="btn btn-default">Details</a></td>
+                        </tr>
+                        @endforeach
+                        </table>
+
+
+                      <a href="{{url('addvendor')}}" class="btn btn-default">Add New Vendor</a>
+
+                    </div>
+                  </div>
+                </div>
+              </div>
+
               @endsection
 
               @section('script')
