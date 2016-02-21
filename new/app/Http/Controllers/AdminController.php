@@ -131,6 +131,15 @@ class AdminController extends Controller
     $sheet->loadView('admin.generatesale',array('sales'=>$sales,'salesum'=>$salesum));
 
     });
+    $excel->sheet('Overall Report', function($sheet) {
+      $sheet->setOrientation('landscape');
+      $picksum=Pickup::sum('amount');
+      $salesum=Sale::sum('amount');
+      $pickcount=Pickup::count();
+      $salecount=Sale::count();
+$sheet->loadView('admin.generateoverall',array('picksum'=>$picksum,'salesum'=>$salesum,'pickcount'=>$pickcount,'salecount'=>$salecount));
+
+});
 
 
   })->export('xlsx');

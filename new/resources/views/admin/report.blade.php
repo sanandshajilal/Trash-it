@@ -132,6 +132,7 @@
 															<thead>
 																	<tr>
 																			<th>Sale #</th>
+																			<th>Vendor Name</th>
 																			<th>Amount (INR)</th>
 																	</tr>
 															</thead>
@@ -139,6 +140,7 @@
 																@foreach($sales as $sale)
 																	<tr>
 																			<td>{{$sale->id}}</td>
+																			<td>{{$sale->vendor_name}}</td>
 																			<td>{{$sale->amount}}</td>
 																	</tr>
 																	@endforeach
