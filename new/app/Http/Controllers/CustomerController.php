@@ -24,8 +24,9 @@ class CustomerController extends Controller
   public function index(){
       $user = Auth::user();
       $items = Item::all();
+      $i=0;
       #$userdetails=Userdetails::all();
-      return view('customer',['user'=>$user,'items'=>$items]);
+      return view('customer',['i'=>$i,'user'=>$user,'items'=>$items]);
   }
 
   public function booking(Request $request){
@@ -33,7 +34,8 @@ class CustomerController extends Controller
     $booking = Booking::create($values);
     $user = Auth::user();
     $items = Item::all();
-    return view('customer',['booking' => $booking,'user'=>$user,'items'=>$items]);
+    $i=0;
+    return view('customer',['i'=>$i,'booking' => $booking,'user'=>$user,'items'=>$items]);
   }
   public function userdetails(Request $request){
     $values = $request->all();

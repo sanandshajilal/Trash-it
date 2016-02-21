@@ -84,11 +84,13 @@
               <div class="row">
                   <div class="col-lg-12">
                       <h1 class="page-header">
-                          Manage <small> Vendors</small>
+                           <small> Sales done with '{{$name}}'</small>
                       </h1>
                       <ol class="breadcrumb">
                           <li class="active">
-                              <i class="fa fa-list"></i> Vendor List
+														@foreach($vendor as $vendor)
+                              <i class="fa fa-list"></i> Vendor Email : {{$vendor->email}}
+															@endforeach
                           </li>
                       </ol>
                   </div>
@@ -98,28 +100,20 @@
                     <div class="col-md-12">
                       <table class="table table-striped">
                         <tr>
-                          <th>Name</th>
-                          <th>Email</th>
-                          <th>Phone No</th>
-                          <th>Links</th>
-                          <th>Status</th>
+                          <th>Sale Id</th>
+                          <th>Item</th>
+                          <th>Amount</th>
                         </tr>
-                        @foreach($vendors as $vendor)
+
                         <tr>
-                          <td>{{$vendor->name}}</td>
-                          <td>{{$vendor->email}}</td>
-                          <td>{{$vendor->phone}}</td>
-                          <td>
-                            <a href="#" class="btn btn-default">Edit</a>
-                            <a href="delvendor/{{$vendor->id}}" class="btn btn-default">Delete</a>
-                          </td>
-                          <td><a href="vendordetails/{{$vendor->name}}" class="btn btn-default">Details</a></td>
+                          @foreach($sale as $sale)
+                          <td>{{$sale->id}}</td>
+                          <td>{{$sale->item_name}}</td>
+                          <td>{{$sale->amount}}</td>
                         </tr>
                         @endforeach
                         </table>
 
-
-                      <a href="{{url('addvendor')}}" class="btn btn-default">Add New Vendor</a>
 
                     </div>
                   </div>

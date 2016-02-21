@@ -115,6 +115,13 @@ class AdminController extends Controller
     return view('admin.vendor',['vendors'=>$vendors,'user'=>Auth::user()]);
   }
 
+  public function vendordetails($name){
+    $sale = Sale::where('vendor_name','=',$name)->get();
+    $vendor = Vendor::where('name','=',$name)->get();
+    return view('admin.vendordetails',['vendor'=>$vendor,'name'=>$name,'sale'=>$sale,'user'=>Auth::user()]);
+  }
+
+/*export as excel file*/
   public function exportexcel(){
         $report=Excel::create('report', function($excel) {
           $excel->sheet('Pickup Details', function($sheet) {

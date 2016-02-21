@@ -91,13 +91,13 @@
                                       <div class="modal-body">
                                         <table class="table table-striped">
                                           <tr>
-                                            <th>Id</th>
+                                            <th>Sl No</th>
                                             <th>Item Name</th>
                                             <th>Price</th>
                                           </tr>
                                           @foreach($items as $item)
                                           <tr>
-                                            <td style="text-align:left">{{$item->id}}</td>
+                                            <td style="text-align:left">{{$i=$i+1}}</td>
                                             <td style="text-align:left">{{$item->name}}</td>
                                             <td style="text-align:left">Rs {{$item->price}} / kg</td>
                                          </tr>
@@ -181,13 +181,13 @@
                                         <div class="modal-body">
                                           <table class="table table-striped">
                                             <tr>
-                                              <th>Id</th>
+                                              <th>Sl No</th>
                                               <th>Item Name</th>
                                               <th>Price</th>
                                             </tr>
                                             @foreach($items as $item)
                                             <tr>
-                                              <td style="text-align:left">{{$item->id}}</td>
+                                              <td style="text-align:left">{{$i=$i+1}}</td>
                                               <td style="text-align:left">{{$item->name}}</td>
                                               <td style="text-align:left">Rs {{$item->price}} / kg</td>
                                            </tr>

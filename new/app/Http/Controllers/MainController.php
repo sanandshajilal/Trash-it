@@ -22,14 +22,16 @@ class MainController extends Controller
 
     function index(){
       $items=Item::all();
-      return view('main',['items'=>$items]);
+      $i=0;
+      return view('main',['i'=>$i,'items'=>$items]);
 
     }
     function contact(Request $request){
       $values = $request->all();
       $feedback = FeedBack::create($values);
       $items=Item::all();
-      return view('main',['contact' => $feedback,'items'=>$items]);
+      $i=0;
+      return view('main',['i'=>$i,'contact' => $feedback,'items'=>$items]);
     }
 
    /* function register(Request $request){

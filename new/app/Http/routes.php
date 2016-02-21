@@ -53,6 +53,7 @@ Route::get('/delitem/{id}','AdminController@delitem');
 Route::get('/addvendor','AdminController@addvendor');
 Route::post('/newvendor','AdminController@newvendor');
 Route::get('/delvendor/{id}','AdminController@delvendor');
+Route::get('/vendordetails/{name}','AdminController@vendordetails');
 
 Route::post('/userdetails','CustomerController@userdetails');
 
