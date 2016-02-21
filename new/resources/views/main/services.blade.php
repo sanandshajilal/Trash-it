@@ -25,9 +25,10 @@
                       <h2>Request Form</h2>
                     </div>
                     @if(isset($booking))
-                      <h3>Booking done successfully</h3>
-                      <p>Booking pickdate: {{$booking->pickdate}}</p>
-                      <!-- Customization has to be done -->
+                    <div class="alert alert-success fade in">
+                     <a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
+                     <strong>Booking Success. </strong> Booking pickdate: {{$booking->pickdate}}
+                    </div>
                     @endif
                     @if(isset($user)&&$user)
                       {!! Form::open(['url'=>'/customer/booking#service','id'=>"bookingForm",'novalidate'=>'']) !!}

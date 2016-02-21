@@ -9,7 +9,10 @@
         </div>
 
         @if(isset($contact))
-          <h3 style="color:#fff">Successfull</h3>
+        <div class="alert alert-success fade in">
+          <a href="#" class="close fade out" data-dismiss="alert" aria-label="close">&times;</a>
+          <strong>Success !</strong> Your message has been send.
+        </div>
         @endif
 
         <div class="row">

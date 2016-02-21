@@ -32,6 +32,7 @@ class CreateUserdetailsTable extends Migration {
 	public function down()
 	{
 		//
+		Schema::drop('usedetails');
 	}
 
 }

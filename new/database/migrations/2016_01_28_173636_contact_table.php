@@ -17,7 +17,7 @@ class ContactTable extends Migration {
 		Schema::create('feedbacks', function (Blueprint $table) {
 				$table->increments('id');
 				$table->string('name');
-				$table->string('email')->unique();
+				$table->string('email');
 				$table->string('phone',12);
 				$table->text('message');
 		});
