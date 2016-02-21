@@ -84,7 +84,7 @@
               <div class="row">
                   <div class="col-lg-12">
                       <h1 class="page-header">
-                          Weekly Report
+                          Financial Report <small>  From: date To: date </small>
                       </h1>
 										</div>
 									</div>
@@ -170,7 +170,7 @@
 														<i class="fa fa-cash"></i> Gross Profit : {{$salesum-$picksum}}
 													</li>
 											</ol>
-
+                     <a href="exportexcel" class="btn btn-default" style="float:right">Generate Excel</a>
 
                   </div>
               </div>

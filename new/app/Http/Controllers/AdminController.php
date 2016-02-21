@@ -13,6 +13,7 @@ use App\Booking;
 use App\Pickup;
 use App\Sale;
 use App\Vendor;
+use Excel;
 use Auth;
 
 class AdminController extends Controller
@@ -48,7 +49,8 @@ class AdminController extends Controller
   }
   public function itemlist(){
     $items=Item::all();
-    return view('admin.item',['items'=>$items,'user'=>Auth::user()]);
+    $i=0;
+    return view('admin.item',['i'=>$i,'items'=>$items,'user'=>Auth::user()]);
   }
   public function report(){
     $pickups=Pickup::all();
@@ -87,9 +89,16 @@ class AdminController extends Controller
     $values = $request->all();
     $item = Item::create($values);
     $items=Item::all();
-    return view('admin.item',['newitem' => $item,'items'=>$items,'user'=>Auth::user()]);
+    $i=0;
+    return view('admin.item',['i'=>$i,'newitem' => $item,'items'=>$items,'user'=>Auth::user()]);
   }
-
+  public function delitem($id){
+    $item = Item::find($id);
+    $item->delete();
+    $items=Item::all();
+    $i=0;
+    return view('admin.item',['i'=>$i,'items'=>$items,'user'=>Auth::user()]);
+}
   public function addvendor(){
     return view('admin.addvendor',['user'=>Auth::user()]);
   }
@@ -99,6 +108,35 @@ class AdminController extends Controller
     $vendors = Vendor::all();
     return view('admin.vendor',['newvendor'=>$vendor,'vendors'=>$vendors,'user'=>Auth::user()]);
   }
+  public function delvendor($id){
+    $vendor = Vendor::find($id);
+    $vendor->delete();
+    $vendors=Vendor::all();
+    return view('admin.vendor',['vendors'=>$vendors,'user'=>Auth::user()]);
+  }
+
+  public function exportexcel(){
+        $report=Excel::create('report', function($excel) {
+          $excel->sheet('Pickup Details', function($sheet) {
+            $sheet->setOrientation('landscape');
+            $pickups=Pickup::all();
+            $picksum=Pickup::sum('amount');
+        $sheet->loadView('admin.generatepickup',array('pickups'=>$pickups,'picksum'=>$picksum));
+      });
+
+        $excel->sheet('Sale Details', function($sheet) {
+          $sheet->setOrientation('landscape');
+        $sales=Sale::all();
+        $salesum=Sale::sum('amount');
+    $sheet->loadView('admin.generatesale',array('sales'=>$sales,'salesum'=>$salesum));
+
+    });
+
+
+  })->export('xlsx');
+}
+
+
 
 
 }

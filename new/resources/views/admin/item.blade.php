@@ -97,19 +97,18 @@
                     <div class="col-md-12">
                       <table class="table table-striped">
                         <tr>
-                          <th>Id</th>
+                          <th>Sl No</th>
                           <th>Item Name</th>
                           <th>Price</th>
                           <th>Links</th>
                         </tr>
                         @foreach($items as $item)
                         <tr>
-                          <td>{{$item->id}}</td>
+                          <td>{{$i=$i+1}}</td>
                           <td>{{$item->name}}</td>
                           <td>Rs {{$item->price}} / kg</td>
                           <td>
-                            <a href="#" class="btn btn-default">Edit</a>
-                            <!--<a href="delitem/{{$item->id}}" class="btn btn-default">Delete</a>-->
+                            <a href="delitem/{{$item->id}}" class="btn btn-default">Delete</a>
                           </td>
                         </tr>
                         @endforeach

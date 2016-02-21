@@ -48,12 +48,15 @@ Route::get('/delemp/{id}','AdminController@delemployee');
 
 Route::get('/additem','AdminController@additem');
 Route::post('/newitem','AdminController@newitem');
+Route::get('/delitem/{id}','AdminController@delitem');
 
 Route::get('/addvendor','AdminController@addvendor');
 Route::post('/newvendor','AdminController@newvendor');
+Route::get('/delvendor/{id}','AdminController@delvendor');
 
 Route::post('/userdetails','CustomerController@userdetails');
 
 /*items*/
 
 Route::get('/items','EmployeeController@items');
+Route::get('/exportexcel','AdminController@exportexcel');
