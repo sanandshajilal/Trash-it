@@ -10,6 +10,7 @@ use App\Http\Controllers\Controller;
 use App\Feedback;
 use App\user;
 use App\Booking;
+use App\Item;
 
 class MainController extends Controller
 {
@@ -20,13 +21,15 @@ class MainController extends Controller
     }
 
     function index(){
-      return view('main');
+      $items=Item::all();
+      return view('main',['items'=>$items]);
 
     }
     function contact(Request $request){
       $values = $request->all();
       $feedback = FeedBack::create($values);
-      return view('main',['contact' => $feedback]);
+      $items=Item::all();
+      return view('main',['contact' => $feedback,'items'=>$items]);
     }
 
    /* function register(Request $request){
@@ -40,7 +43,8 @@ class MainController extends Controller
     function booking(Request $request){
       $values = $request->all();
       $booking = Booking::create($values);
-      return view('main',['booking' => $booking]);
+      $items=Item::all();
+      return view('main',['booking' => $booking,'items'=>$items]);
     }
 
 }

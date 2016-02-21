@@ -11,6 +11,7 @@ use Auth;
 use App\Feedback;
 use App\user;
 use App\Booking;
+use App\Item;
 #use App\Userdetails;
 
 class CustomerController extends Controller
@@ -22,15 +23,17 @@ class CustomerController extends Controller
 
   public function index(){
       $user = Auth::user();
+      $items = Item::all();
       #$userdetails=Userdetails::all();
-      return view('customer',['user'=>$user]);
+      return view('customer',['user'=>$user,'items'=>$items]);
   }
 
   public function booking(Request $request){
     $values = $request->all();
     $booking = Booking::create($values);
     $user = Auth::user();
-    return view('customer',['booking' => $booking,'user'=>$user]);
+    $items = Item::all();
+    return view('customer',['booking' => $booking,'user'=>$user,'items'=>$items]);
   }
   public function userdetails(Request $request){
     $values = $request->all();

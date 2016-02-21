@@ -76,6 +76,41 @@
                                     <textarea class="form-control" placeholder="Remarks" name="remarks"></textarea>
                                 </div>
 
+                                <p style="float:right"><a href="#itemmodal" data-toggle="modal">* Item Details</a> </p>
+
+                                <!--item details modal-->
+
+                                <div id="itemmodal" class="modal" data-easein="slideLeftIn" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+                                  <div class="modal-dialog">
+                                    <div class="modal-content">
+                                      <div class="modal-header">
+                                        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+                                        <h4 class="modal-title">ITEM DETAILS</h4>
+                                      </div>
+                                      <div class="modal-body">
+                                        <table class="table table-striped">
+                                          <tr>
+                                            <th>Id</th>
+                                            <th>Item Name</th>
+                                            <th>Price</th>
+                                          </tr>
+                                          @foreach($items as $item)
+                                          <tr>
+                                            <td style="text-align:left">{{$item->id}}</td>
+                                            <td style="text-align:left">{{$item->name}}</td>
+                                            <td style="text-align:left">Rs {{$item->price}} / kg</td>
+                                         </tr>
+                                          @endforeach
+                                          </table>
+                                      </div>
+                                      <div class="modal-footer">
+                                        <button class="btn btn-default" data-dismiss="modal" aria-hidden="true">Close</button>
+                                      </div>
+                                    </div>
+                                  </div>
+                                </div>
+
+
                                 </div>
                                 <div class="clearfix"></div>
                                 <div class=" ">
@@ -131,6 +166,41 @@
                                   <div class="form-group">
                                       <textarea class="form-control" placeholder="Remarks" name="remarks"></textarea>
                                   </div>
+                                  <p style="float:right"><a href="#itemmodal" data-toggle="modal">* Item Details</a> </p>
+
+                                  <!--item details modal-->
+
+                                  <div id="itemmodal" class="modal" data-easein="slideLeftIn" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+                                    <div class="modal-dialog">
+                                      <div class="modal-content">
+                                        <div class="modal-header">
+                                          <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+                                          <h4 class="modal-title">ITEM DETAILS</h4>
+                                        </div>
+                                        <div class="modal-body">
+                                          <table class="table table-striped">
+                                            <tr>
+                                              <th>Id</th>
+                                              <th>Item Name</th>
+                                              <th>Price</th>
+                                            </tr>
+                                            @foreach($items as $item)
+                                            <tr>
+                                              <td style="text-align:left">{{$item->id}}</td>
+                                              <td style="text-align:left">{{$item->name}}</td>
+                                              <td style="text-align:left">Rs {{$item->price}} / kg</td>
+                                           </tr>
+                                            @endforeach
+                                            </table>
+                                        </div>
+                                        <div class="modal-footer">
+                                          <button class="btn btn-default" data-dismiss="modal" aria-hidden="true">Close</button>
+                                        </div>
+                                      </div>
+                                    </div>
+                                  </div>
+
+
 
                                   </div>
                                   <div class="clearfix"></div>
