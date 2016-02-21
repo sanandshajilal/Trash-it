@@ -84,13 +84,94 @@
               <div class="row">
                   <div class="col-lg-12">
                       <h1 class="page-header">
-                          Monthly <small> reports</small>
+                          Weekly Report
                       </h1>
+										</div>
+									</div>
+									<div class="row">
+										<div class="col-lg-6">
+
                       <ol class="breadcrumb">
                           <li class="active">
-                              <i class="fa fa-bar-chart"></i> Financial Reports
+                              <i class="fa fa-bar-chart"></i> Payments
                           </li>
                       </ol>
+											<div class="table-responsive">
+													<table class="table table-hover ">
+															<thead>
+																	<tr>
+																			<th>Pickup #</th>
+																			<th>Amount (INR)</th>
+																	</tr>
+															</thead>
+															<tbody>
+																@foreach($pickups as $pickup)
+																	<tr>
+																			<td>{{$pickup->id}}</td>
+																			<td>{{$pickup->amount}}</td>
+																	</tr>
+																	@endforeach
+															</tbody>
+													</table>
+											</div>
+											<ol class="breadcrumb">
+													<li class="active">
+														<i class="fa fa-cash"></i>  {{$pickcount}} pickups done !
+													</li>
+											</ol>
+										</div>
+										<div class="col-lg-6">
+
+											<ol class="breadcrumb">
+													<li class="active">
+															<i class="fa fa-bar-chart"></i> Sales
+													</li>
+											</ol>
+											<div class="table-responsive">
+													<table class="table table-hover ">
+															<thead>
+																	<tr>
+																			<th>Sale #</th>
+																			<th>Amount (INR)</th>
+																	</tr>
+															</thead>
+															<tbody>
+																@foreach($sales as $sale)
+																	<tr>
+																			<td>{{$sale->id}}</td>
+																			<td>{{$sale->amount}}</td>
+																	</tr>
+																	@endforeach
+															</tbody>
+													</table>
+											</div>
+											<ol class="breadcrumb">
+													<li class="active">
+														<i class="fa fa-cash"></i> {{$salecount}} sales done !
+													</li>
+											</ol>
+										</div>
+									</div>
+									<div class="row">
+										<div class="col-lg-12">
+										<hr/>
+											<ol class="breadcrumb">
+													<li class="active">
+														<i class="fa fa-cash"></i>  Amount Paid : {{$picksum}}
+													</li>
+											</ol>
+											<ol class="breadcrumb">
+													<li class="active">
+														<i class="fa fa-cash"></i>  Amount Got : {{$salesum}}
+													</li>
+											</ol>
+											<ol class="breadcrumb">
+													<li class="active">
+														<i class="fa fa-cash"></i> Gross Profit : {{$salesum-$picksum}}
+													</li>
+											</ol>
+
+
                   </div>
               </div>
               @endsection

@@ -171,18 +171,16 @@
                                     <div class="col-xs-3">
                                         <i class="fa fa-bank fa-5x"></i>
                                     </div>
-																		@foreach($pickups as $pickup)
-																		<!--{{$total=$total+$pickup->amount}}-->
-																		@endforeach
+
                                     <div class="col-xs-9 text-right">
-                                        <div class="huge">{{$total}}</div>
-                                        <div>Total Amount Paid !</div>
+                                        <div class="huge ">{{$salesum - $picksum}}</div>
+                                        <div>Total Profit !</div>
                                     </div>
                                 </div>
                             </div>
                             <a href="#">
                                 <div class="panel-footer">
-                                    <span class="pull-left">View Details</span>
+                                    <span class="pull-left"> View Details</span>
                                     <span class="pull-right"><i class="fa fa-arrow-circle-right"></i></span>
                                     <div class="clearfix"></div>
                                 </div>

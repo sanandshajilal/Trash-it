@@ -23,11 +23,12 @@ class AdminController extends Controller
     $pickups=Pickup::all();
     $feedcount=Feedback::count();
     $pickcount=Pickup::count();
-    $total=0;
+    $picksum=Pickup::sum('amount');
+    $salesum=Sale::sum('amount');
 
     $sales=Sale::all();
     $salecount=Sale::count();
-    return view('admin.dashboard',['salecount'=>$salecount,'sales'=>$sales,'total'=>$total,'pickcount'=>$pickcount,'feedcount'=>$feedcount,'pickups'=>$pickups,'user'=>Auth::user()]);
+    return view('admin.dashboard',['salecount'=>$salecount,'sales'=>$sales,'picksum'=>$picksum,'salesum'=>$salesum,'pickcount'=>$pickcount,'feedcount'=>$feedcount,'pickups'=>$pickups,'user'=>Auth::user()]);
   }
   public function emplist(){
     $users=User::where('type','=', 0)
@@ -50,7 +51,13 @@ class AdminController extends Controller
     return view('admin.item',['items'=>$items,'user'=>Auth::user()]);
   }
   public function report(){
-    return view('admin.report',['user'=>Auth::user()]);
+    $pickups=Pickup::all();
+    $sales=Sale::all();
+    $picksum=Pickup::sum('amount');
+    $salesum=Sale::sum('amount');
+    $pickcount=Pickup::count();
+    $salecount=Sale::count();
+    return view('admin.report',['salecount'=>$salecount,'pickcount'=>$pickcount,'sales'=>$sales,'pickups'=>$pickups,'picksum'=>$picksum,'salesum'=>$salesum,'user'=>Auth::user()]);
   }
   public function feedback(){
     $feedbacks=Feedback::all();
