@@ -7,6 +7,7 @@
 @section('style')
 	{!! Html::style('css/carousel.css') !!}
   {!! Html::style('css/style.css') !!}
+
 @endsection
 
 @section('content')

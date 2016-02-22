@@ -37,7 +37,9 @@ class MainController extends Controller
    /* function register(Request $request){
       $values = $request->all();
       User::create($values);
-      return view('main',['values' => $values]);
+      $items=Item::all();
+      $i=0;
+      return view('main',['items'=>$items,'i'=>$i,'values' => $values]);
     }*/
 
     /* when no users are logged this route will be used. see customer controller for the other one. */
