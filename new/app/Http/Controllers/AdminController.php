@@ -15,10 +15,19 @@ use App\Sale;
 use App\Vendor;
 use Excel;
 use Auth;
+use Redirect;
 
 class AdminController extends Controller
 {
 
+  public function __construct(){
+    $this->middleware('auth',['except'=>'']);
+    //check if admin
+    $user = Auth::user();
+    if($user->type!=-1){
+      Redirect::to('/')->send();
+    }
+  }
 
   public function index(){
     $pickups=Pickup::all();
@@ -70,6 +79,12 @@ class AdminController extends Controller
 
   public function addemployee(){
     return view('admin.addempl',['user'=>Auth::user()]);
+  }
+  public function createemployee(Request $request){
+    $values = $request->all();
+    $values['password'] = bcrypt('123456'); //default password
+    User::create($values);
+    return redirect('/emplist');
   }
 
   public function delemployee($id){

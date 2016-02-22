@@ -97,32 +97,34 @@
 							<div class="row">
 								<div class="col-md-6">
 
-                <form id="addemp" name="addemp_form" action="addemp.php">
+
+								{!! Form::open(['url'=>'/addemp']) !!}
+
                 <div class="form-group">
-                    <input type="text" class="form-control" placeholder="First Name *" id="name">
+                    <input type="text" class="form-control" placeholder="First Name *" name="fname">
                 </div>
                 <div class="form-group">
-                    <input type="text" class="form-control" placeholder="Last Name *" id="email">
+                    <input type="text" class="form-control" placeholder="Last Name *" name="lname">
                 </div>
 
             </div>
             <div class="col-md-6">
-							<select class="form-group form-control" >
-								<option >PickUp Employee </option>
-								<option>Stock Master </option>
+							<select name="type" class="form-group form-control" >
+								<option value="0">PickUp Employee </option>
+								<option value="2">Stock Master </option>
 							</select>
 
 							<!-- This dropdown needed only for pickup employee-->
 							<select class="form-group form-control" >
-								<option >Koramangala </option>
+								<option>Koramangala </option>
 								<option>Madiwala </option>
 								<option>Some other area ! </option>
 							</select>
             <div class="form-group">
-                <input type="number" class="form-control" placeholder="Tel No *" id="pswrd">
+                <input type="number" class="form-control" placeholder="Tel No *" name="phone">
             </div>
             <div class="form-group">
-                <input type="email" class="form-control" placeholder="Email id *" id="rpswrd">
+                <input type="email" class="form-control" placeholder="Email id *" name="email">
             </div>
             <div style="float:left">
               <input type="radio" name="gender" value="male"> Male

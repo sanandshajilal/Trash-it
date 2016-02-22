@@ -44,6 +44,7 @@ Route::get('/feedback','AdminController@feedback');
 
 
 Route::get('/addemp','AdminController@addemployee');
+Route::post('/addemp','AdminController@createemployee');
 Route::get('/delemp/{id}','AdminController@delemployee');
 
 Route::get('/additem','AdminController@additem');

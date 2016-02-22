@@ -12,6 +12,8 @@ use App\Sale;
 use App\Vendor;
 use Auth;
 
+use DB;
+
 class StockMasterController extends Controller {
 
 	/**
@@ -23,8 +25,15 @@ class StockMasterController extends Controller {
  		$items = Item::all();
  		$bookings = Booking::all();
 		$pickups = Pickup::all();
+
+		$ids = Pickup::lists('booking_id');
+
+		$delayed = DB::table('bookings')->whereNotIn('id',$ids)->get(); //bookings which are not in pickups
+
 		$date=date('Y-m-d');
- 		return view('stockmaster.index',['user'=>Auth::user(),'items'=>$items,'bookings'=>$bookings,'pickups'=>$pickups,'date'=>$date]);
+ 		return view('stockmaster.index',['user'=>Auth::user(),'items'=>$items,
+					'delayed' => $delayed,
+					'bookings'=>$bookings,'pickups'=>$pickups,'date'=>$date]);
  	}
 
 public function sales(){

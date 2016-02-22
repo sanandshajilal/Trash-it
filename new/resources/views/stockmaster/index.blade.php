@@ -90,7 +90,7 @@
                           <th>Expected Date</th>
                           <th>Links</th>
                         </tr>
-                        @foreach($bookings as $booking)
+                        @foreach($delayed  as $booking)
                         @if($booking->pickdate<$date)
                         <tr>
                           <td>{{$booking->id}}</td>
