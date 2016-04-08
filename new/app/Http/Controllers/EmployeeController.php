@@ -10,6 +10,7 @@ use App\Http\Controllers\Controller;
 use App\Item;
 use App\Booking;
 use App\Pickup;
+use DB;
 
 class EmployeeController extends Controller
 {
@@ -18,7 +19,12 @@ class EmployeeController extends Controller
       $items = Item::all();
       $bookings = Booking::all();
       $date=date('Y-m-d');
-      return view('employee',['user'=>Auth::user(),'items'=>$items,'bookings'=>$bookings,'date'=>$date]);
+      $ids = Pickup::lists('booking_id');
+
+  		$tobedone = DB::table('bookings')->whereNotIn('id',$ids)->get(); //bookings which are not in pickups
+      $notify = DB::table('bookings')->whereNotIn('id',$ids)->count();
+
+      return view('employee',['user'=>Auth::user(),'items'=>$items,'bookings'=>$bookings,'date'=>$date,'tobedone'=>$tobedone,'notify'=>$notify]);
     }
 
     /* should use an appropriate controller for items. But for a quick hack */

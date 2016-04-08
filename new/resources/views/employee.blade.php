@@ -56,12 +56,23 @@
     	<div class="row">
 		    <div class="col-lg-3 col-md-3 col-sm-3"></div>
 		    <div class="col-lg-6 col-md-6 col-sm-6">
-
+					<div class="row">
+						<div class="col-lg-3">
+						</div>
+					<div class="col-lg-6">
+						<div class="alert alert-success fade in">
+							<a href="#" class="close fade out" data-dismiss="alert" aria-label="close">&times;</a>
+							You have <strong>{{$notify}}</strong> new bookings !
+						</div>
+					</div>
+				</div>
 					<div class="section-subtitle">
 	          <h2>Pickup Details</h2>
 	          <img src="{{url('img/shape.png')}}" alt="">
 	        </div>
+
 	        <div class="row">
+
 	          <div class="col-lg-8 col-md-8 col-sm-8">
 
 							<ul ng-show="error" class="alert alert-danger">
@@ -72,8 +83,8 @@
 				        <div class="form-group">
 									<!-- sorting logic has to be done -->
 									<select ng-model="booking_id" ng-change="user_details" class="form-control" style="width:425px;">
-										<option disabled="true" selected="true">*** Pickups for {{$date}} ***</option>
-										@foreach($bookings as $key => $value)
+										<option disabled="true" selected="true">*** Pickups Pending ***</option>
+										@foreach($tobedone as $key => $value)
 										  @if($value->pickdate==$date)
 											<option value="{{$value->id}}">{{$value->id}} : {{$value->name}}</option>
 											@endif

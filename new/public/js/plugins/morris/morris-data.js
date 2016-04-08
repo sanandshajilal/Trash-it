@@ -7,58 +7,58 @@ $(function() {
         element: 'morris-area-chart',
         data: [{
             period: '2010 Q1',
-            iphone: 2666,
-            ipad: null,
-            itouch: 2647
+            pickup: 2666,
+            sales: null,
+            somethingelse: 2647
         }, {
             period: '2010 Q2',
-            iphone: 2778,
-            ipad: 2294,
-            itouch: 2441
+            pickup: 2778,
+            sales: 2294,
+            somethingelse: 2441
         }, {
             period: '2010 Q3',
-            iphone: 4912,
-            ipad: 1969,
-            itouch: 2501
+            pickup: 4912,
+            sales: 1969,
+            somethingelse: 2501
         }, {
             period: '2010 Q4',
-            iphone: 3767,
-            ipad: 3597,
-            itouch: 5689
+            pickup: 3767,
+            sales: 3597,
+            somethingelse: 5689
         }, {
             period: '2011 Q1',
-            iphone: 6810,
-            ipad: 1914,
-            itouch: 2293
+            pickup: 6810,
+            sales: 1914,
+            somethingelse: 2293
         }, {
             period: '2011 Q2',
-            iphone: 5670,
-            ipad: 4293,
-            itouch: 1881
+            pickup: 5670,
+            sales: 4293,
+            somethingelse: 1881
         }, {
             period: '2011 Q3',
-            iphone: 4820,
-            ipad: 3795,
-            itouch: 1588
+            pickup: 4820,
+            sales: 3795,
+            somethingelse: 1588
         }, {
             period: '2011 Q4',
-            iphone: 15073,
-            ipad: 5967,
-            itouch: 5175
+            pickup: 15073,
+            sales: 5967,
+            somethingelse: 5175
         }, {
             period: '2012 Q1',
-            iphone: 10687,
-            ipad: 4460,
-            itouch: 2028
+            pickup: 10687,
+            sales: 4460,
+            somethingelse: 2028
         }, {
             period: '2012 Q2',
-            iphone: 8432,
-            ipad: 5713,
-            itouch: 1791
+            pickup: 8432,
+            sales: 5713,
+            somethingelse: 1791
         }],
         xkey: 'period',
-        ykeys: ['iphone', 'ipad', 'itouch'],
-        labels: ['iPhone', 'iPad', 'iPod Touch'],
+        ykeys: ['pickup', 'sales', 'somethingelse'],
+        labels: ['pickup', 'sales', 'somethingelse'],
         pointSize: 2,
         hideHover: 'auto',
         resize: true
@@ -196,22 +196,22 @@ $(function() {
     Morris.Bar({
         element: 'morris-bar-chart',
         data: [{
-            device: 'iPhone',
+            device: 'pickup',
             geekbench: 136
         }, {
-            device: 'iPhone 3G',
+            device: 'pickup 3G',
             geekbench: 137
         }, {
-            device: 'iPhone 3GS',
+            device: 'pickup 3GS',
             geekbench: 275
         }, {
-            device: 'iPhone 4',
+            device: 'pickup 4',
             geekbench: 380
         }, {
-            device: 'iPhone 4S',
+            device: 'pickup 4S',
             geekbench: 655
         }, {
-            device: 'iPhone 5',
+            device: 'pickup 5',
             geekbench: 1571
         }],
         xkey: 'device',
