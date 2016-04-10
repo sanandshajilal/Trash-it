@@ -91,7 +91,7 @@
 										@endforeach
 									</select>
 				        </div>
-				        <div class="row">
+				        <!--div class="row">
 				          <div class="col-lg-6">
 				            <div class="form-group">
 				                <input ng-model="amount" type="number" class="form-control" placeholder="Amount Paid *" id="amntpaid">
@@ -102,7 +102,7 @@
 				                <input type="number" class="form-control" placeholder="Confirm *" id="camnt">
 				            </div>
 				          </div>
-				        </div>
+				        </div-->
 								<!-- dynamic fields -->
 
 								<!-- List of added items -->
@@ -136,6 +136,17 @@
 									</div>
 					      </div>
 
+								<div class="row">
+				          <div class="col-lg-12">
+				            <div class="form-group">
+				                <!--input ng-model="amount" type="number" class="form-control" placeholder="Amount Paid *" id="amntpaid"-->
+												<h3>Total Amount : &#8377 @{{amount}}</h3>
+				            </div>
+				          </div>
+				          </div>
+
+
+
 					      <div class="form-group">
 					           <button type="button" ng-click="formsubmit()" class="btn btn-default btn-submit">Submit</button>
 					      </div>
@@ -163,6 +174,8 @@
 			</div>
 		</div>
 	</div>
+
+	<div style="height:50px;"></div><!--padding-->
 
 
 
@@ -198,13 +211,14 @@
 	.controller('Controller', function($scope,Resource){
 
 
-			$scope.weights = [{w:' 0.5 kg'},{w:'1 kg'},{w:' 1.5 kg'},{w:' 2 kg'},
-								{w:' 2.5 kg'},{w:' 5 kg'},{w:' 10 kg'},{w:' 20+ kg'},{w:' 50+ kg'}];
+			$scope.weights = [{w:' 0.5 kg',val:0.5},{w:'1 kg',val:1},{w:' 1.5 kg',val:1.5},{w:' 2 kg',val:2},
+								{w:' 2.5 kg',val:2.5},{w:' 5 kg',val:5},{w:' 10 kg',val:10},{w:' 20+ kg',val:20},{w:' 50+ kg',val:50}];
 
 			$scope.items = [];
 			$scope.visible = true;
 			$scope.itemname = '';
 			$scope.error = false;
+			$scope.amount = 0;
 
 			Resource.get({}, function (response) {
 				$scope.allitems = response;
@@ -214,14 +228,26 @@
 
 			$scope.pushItem = function(item,weight){
 				if(item!=''&&weight!=''){
-					$scope.items.push({name:item.name,id:item.id,weight:weight.w});
+					$scope.items.push({name:item.name,id:item.id,price:item.price,weight:weight.w,wval:weight.val});
 					$scope.itemname = $scope.allitems[0];
 					$scope.weight = $scope.weights[0];
+					recompute();
 				}
+			}
+
+			var recompute = function(){
+				var amount =0;
+				for(var i=0;i<$scope.items.length;i++){
+			    var item = $scope.items[i];
+					amount+=item.price*item.wval;
+
+				}
+				$scope.amount = amount;
 			}
 
 			$scope.removeItem = function(index){
 				$scope.items.splice(index,1);
+				recompute();
 			}
 
 
