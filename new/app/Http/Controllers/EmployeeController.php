@@ -34,6 +34,11 @@ class EmployeeController extends Controller
       return $items;
     }
 
+    function getbooking($id){
+      $booking = Booking::find($id);
+      return $booking;
+    }
+
     public function pickup(Request $request){
       return Pickup::create($request->all());
     }

@@ -51,4 +51,6 @@ class MainController extends Controller
       return view('main',['booking' => $booking,'items'=>$items]);
     }
 
+    
+
 }

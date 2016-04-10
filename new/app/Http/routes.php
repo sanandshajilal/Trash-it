@@ -20,6 +20,8 @@ Route::post('/contact','MainController@contact');
 Route::post('/register', 'MainController@Register');
 Route::post('/booking','MainController@booking');
 
+Route::get('/booking/{id}','EmployeeController@getbooking'); // fetch booking details 
+
 /* logged in pages */
 Route::get('/employee','EmployeeController@index');
 Route::get('/empprofile','EmployeeController@empprofile');

@@ -82,7 +82,8 @@
 			        <form id="pickupform" name="pickup_form" action="pickup.php">
 				        <div class="form-group">
 									<!-- sorting logic has to be done -->
-									<select ng-model="booking_id" ng-change="user_details" class="form-control" style="width:425px;">
+
+									<select ng-model="booking_id" ng-change="user_details()" class="form-control" style="width:425px;">
 										<option disabled="true" selected="true">*** Pickups Pending ***</option>
 										@foreach($tobedone as $key => $value)
 										  @if($value->pickdate==$date)
@@ -156,14 +157,14 @@
 					  <!-- Right Section -->
 
 						<div class="col-lg-4">
-						  <div class="thumbnail">
+						  <div class="thumbnail" ng-show="user">
 						    <h4><i class="fa fa-user"></i>Customer Details </h4>
 						  	<hr/>
 							  <div class="thumbdetails">
-									<h5><b>Name :</b><i>  {{$user->fname}}</i></h5>
-									<h5><b>Address :</b><i>  #11/1 1st Main 5th Cross Bharathi Layout, SG Palaya, Koramangala</i></h5>
-									<h5><b>Email :</b><i>  {{$user->email}}</i></h5>
-									<h5><b>Phone :</b><i>  740540640</i></h5>
+									<h5><b>Name :</b><i>  @{{user.name}}</i></h5>
+									<h5><b>Address :</b><i> @{{user.adrsl1}}<br> @{{user.adrsl2}},@{{user.place}} </i></h5>
+									<h5><b>Email :</b><i>  @{{user.email}}</i></h5>
+									<h5><b>Phone :</b><i>  @{{user.phone}}</i></h5>
 								</div>
 						  </div>
 						</div>
@@ -205,6 +206,7 @@
 			return $resource("{{url("/items")}}", {},
 			{
 					get:{method:'GET',params: {}, cache:false,isArray:true},
+					getUser:{method:'GET',params: {}, cache:false,isArray:false,url:'{{url("/booking/:id")}}'},
 					post: {method:'POST',cache:false,isArray:false,url:'{{url("/pickup")}}'},
 			});
 	})
@@ -248,6 +250,13 @@
 			$scope.removeItem = function(index){
 				$scope.items.splice(index,1);
 				recompute();
+			}
+
+			$scope.user_details = function(){
+				console.log("Details");
+				Resource.getUser({id:$scope.booking_id}, function (response) {
+					$scope.user = response;
+				});
 			}
 
 
