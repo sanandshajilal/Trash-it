@@ -65,7 +65,7 @@
                                   <h4 class="subheading name"> Jibrael Jos</h4>
                               </div>
                               <div class="timeline-body">
-                                  <p class="text-muted">We would like to express our special thanks of gratitude to oru guide Jibreal Jos, Associate Proffessor Christ University, who gave us efficiant guidance to do this project. </p>
+                                  <p class="text-muted">We would like to express our special thanks of gratitude to our guide Jibrael Jos, Associate Proffessor Christ University, who gave us efficiant guidance to do this project. </p>
                                   <ul class="list-inline social-buttons">
                                     <li><a href="#"><i class="fa fa-twitter"></i></a>
                                     </li>
