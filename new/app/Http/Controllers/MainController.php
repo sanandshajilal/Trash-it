@@ -48,9 +48,10 @@ class MainController extends Controller
       $values = $request->all();
       $booking = Booking::create($values);
       $items=Item::all();
-      return view('main',['booking' => $booking,'items'=>$items]);
+      $i=0;
+      return view('main',['i'=>$i,'booking' => $booking,'items'=>$items]);
     }
 
-    
+
 
 }
