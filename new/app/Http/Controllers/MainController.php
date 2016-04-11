@@ -4,6 +4,8 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 
+use Validator;
+
 use App\Http\Requests;
 use App\Http\Controllers\Controller;
 
@@ -45,10 +47,31 @@ class MainController extends Controller
     /* when no users are logged this route will be used. see customer controller for the other one. */
 
     function booking(Request $request){
-      $values = $request->all();
-      $booking = Booking::create($values);
+
       $items=Item::all();
       $i=0;
+      $values = $request->all();
+
+      $rules =  [
+         'name' => 'required|max:100',
+         'adrsl1' => 'required',
+         'adrsl2' => 'required',
+         'place' => 'required',
+         'pin' => 'required|digits:6',
+         'email' => 'required|email',
+         'phone' => 'required|digits:10',
+         'pickdate' => 'required|date_format:Y-m-d|after:today'
+       ];
+      $validator = Validator::make($request->all(),$rules);
+      if ($validator->fails()) {
+             return view('main',['i'=>$i,'items'=>$items,'req_errors'=>$validator->errors(),'req_inputs'=>$request->all()]);
+             // ['status'=>'fail','error'=>'invalid data',,];
+      }
+
+
+      $booking = Booking::create($values);
+
+
       return view('main',['i'=>$i,'booking' => $booking,'items'=>$items]);
     }
 

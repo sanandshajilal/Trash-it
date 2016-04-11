@@ -121,20 +121,38 @@
                     </form>
 
                      @else
+                         @if(isset($req_errors))
+                           @include('errors.errorlist',['err'=>$req_errors])
+                         @endif
                         {!! Form::open(['url'=>'/booking#service','id'=>"bookingForm",'novalidate'=>'']) !!}
 
                         <!-- Booking Form when user is not logged in -->
                         <div class="col-md-6">
                                  <div class="form-group">
-                                      <input type="text" class="form-control" placeholder="Name *" name="name">
+                                   @if(isset($req_inputs))
+                                     <input type="text" class="form-control" placeholder="Name *" name="name" value="{{$req_inputs['name']}}">
+                                   @else
+                                     <input type="text" class="form-control" placeholder="Name *" name="name" >
+                                   @endif
+
                                   </div>
 
                                   <div class="form-group">
-                                       <input type="text" class="form-control" placeholder="Address Line 1 *" name="adrsl1">
+                                    @if(isset($req_inputs))
+                                        <input type="text" class="form-control" placeholder="Address Line 1 *" name="adrsl1" value="{{$req_inputs['adrsl1']}}">
+                                    @else
+                                        <input type="text" class="form-control" placeholder="Address Line 1 *" name="adrsl1">
+                                    @endif
+
                                    </div>
 
                                    <div class="form-group">
-                                        <input type="text" class="form-control" placeholder="Address Line 2 *" name="adrsl2">
+                                     @if(isset($req_inputs))
+                                         <input type="text" class="form-control" placeholder="Address Line 2 *" name="adrsl2" value="{{$req_inputs['adrsl2']}}">
+                                     @else
+                                         <input type="text" class="form-control" placeholder="Address Line 2 *" name="adrsl2">
+                                     @endif
+
                                     </div>
 
                                     <div class="form-group">
@@ -150,22 +168,47 @@
                                      </div>
 
                                      <div class="form-group">
-                                          <input type="text" class="form-control" placeholder="Pincode *" name="pin">
+                                       @if(isset($req_inputs))
+                                         <input type="text" class="form-control" placeholder="Pincode *" name="pin" value="{{$req_inputs['pin']}}">
+                                       @else
+                                         <input type="text" class="form-control" placeholder="Pincode *" name="pin">
+                                       @endif
+
                                       </div>
 
                                 </div>
                                  <div class="col-md-6">
                                    <div class="form-group">
-                                       <input type="email" class="form-control" placeholder="Email *" name="email">
+                                       @if(isset($req_inputs))
+                                          <input type="email" class="form-control" placeholder="Email *" name="email" value="{{$req_inputs['email']}}">
+                                       @else
+                                          <input type="email" class="form-control" placeholder="Email *" name="email">
+                                       @endif
+
                                    </div>
                                    <div class="form-group">
+                                     @if(isset($req_inputs))
+                                       <input type="tel" class="form-control" placeholder="Phone *" name="phone" value="{{$req_inputs['phone']}}">
+                                     @else
                                        <input type="tel" class="form-control" placeholder="Phone *" name="phone">
+                                     @endif
+
                                    </div>
                                    <div class="form-group">
-                                       <input type="date" class="form-control" placeholder="Pickup Date" name="pickdate">
+                                     @if(isset($req_inputs))
+                                        <input type="date" class="form-control" placeholder="Pickup Date" name="pickdate" value="{{$req_inputs['pickdate']}}">
+                                     @else
+                                        <input type="date" class="form-control" placeholder="Pickup Date" name="pickdate">
+                                     @endif
+
                                    </div>
                                   <div class="form-group">
+                                    @if(isset($req_inputs))
+                                      <textarea class="form-control" placeholder="Remarks" name="remarks">{{$req_inputs['remarks']}}</textarea>
+                                    @else
                                       <textarea class="form-control" placeholder="Remarks" name="remarks"></textarea>
+                                    @endif
+
                                   </div>
                                   <p style="float:right"><a href="#itemmodal" data-toggle="modal">* Item Details</a> </p>
 
