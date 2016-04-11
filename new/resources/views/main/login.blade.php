@@ -11,7 +11,7 @@
             <br/>
             <br/>
 
-            {!! Form::open(['url'=>'/auth/login']) !!}
+            {!! Form::open(['url'=>'/auth/login#login']) !!}
 
             <div class="form-group">
                 <input type="email" name="email" class="form-control" placeholder="Email *" id="name">

@@ -141,7 +141,7 @@
 				          <div class="col-lg-12">
 				            <div class="form-group">
 				                <!--input ng-model="amount" type="number" class="form-control" placeholder="Amount Paid *" id="amntpaid"-->
-												<h3>Total Amount : &#8377 @{{amount}}</h3>
+												<h3 style="background-color:white">Total Amount : &#8377 @{{amount}}</h3>
 				            </div>
 				          </div>
 				          </div>
@@ -165,6 +165,7 @@
 									<h5><b>Address :</b><i> @{{user.adrsl1}}<br> @{{user.adrsl2}},@{{user.place}} </i></h5>
 									<h5><b>Email :</b><i>  @{{user.email}}</i></h5>
 									<h5><b>Phone :</b><i>  @{{user.phone}}</i></h5>
+									<h5><b>Remarks :</b><i>  @{{user.remarks}}</i></h5>
 								</div>
 						  </div>
 						</div>

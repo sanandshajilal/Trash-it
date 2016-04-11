@@ -9,6 +9,7 @@ use Illuminate\Http\Request;
 
 use App\Http\Requests;
 use Auth;
+use App\Item;
 
 class AuthController extends Controller {
 
@@ -60,7 +61,9 @@ class AuthController extends Controller {
 		$validator = $this->registrar->validator($request->all());
 
 		if ($validator->fails()) {
-					 return view('main',['errors'=>$validator->errors(),'input'=>$request->all()]);
+		      	$items=Item::all();
+			      $i=0;
+					 return view('main',['i'=>$i,'items'=>$items,'errors'=>$validator->errors(),'input'=>$request->all()]);
 		}
 		$user = $this->registrar->create($request->all());
 		$this->auth->login($user);
